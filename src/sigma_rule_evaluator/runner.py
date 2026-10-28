@@ -357,9 +357,10 @@ def run_target_batch(config: RunnerConfig) -> int:
             )
 
         technique_summaries.append(technique_summary_to_dict(technique_id, results, zircolite))
+        write_result_csv(batch_dir, all_results, config.rules_dir)
+        write_result_json(batch_dir, batch_metadata, all_rows, technique_summaries)
+        print(f"    [checkpoint] result written ({len(all_results)}/{len(selected_cases)} cases)")
 
-    write_result_csv(batch_dir, all_results, config.rules_dir)
-    write_result_json(batch_dir, batch_metadata, all_rows, technique_summaries)
     print(f"\n[+] Result CSV  : {batch_dir / 'result.csv'}")
     print(f"\n[+] Result JSON : {batch_dir / 'result.json'}")
     return 0

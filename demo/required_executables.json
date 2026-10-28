@@ -1,0 +1,877 @@
+﻿[
+    {
+        "executable":  "7z.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files\\7-Zip\\7z.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_7zip_exfil_dmp_files",
+                      "proc_creation_win_7zip_password_compression"
+                  ]
+    },
+    {
+        "executable":  "accesschk.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\accesschk.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_sysinternals_accesschk_check_permissions"
+                  ]
+    },
+    {
+        "executable":  "AddInUtil.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\AddInUtil.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_addinutil_uncommon_cmdline"
+                  ]
+    },
+    {
+        "executable":  "AdFind.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\AtomicRedTeam\\atomics\\T1087.002\\bin\\AdFind.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_pua_adfind_susp_usage"
+                  ]
+    },
+    {
+        "executable":  "AdvancedRun.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Tools\\AdvancedRun.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_pua_advancedrun"
+                  ]
+    },
+    {
+        "executable":  "AgentExecutor.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files (x86)\\Microsoft Intune Management Extension\\AgentExecutor.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_agentexecutor_potential_abuse",
+                      "proc_creation_win_agentexecutor_susp_usage"
+                  ]
+    },
+    {
+        "executable":  "AnyDesk.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Users\\bkcs\\Desktop\\AnyDesk.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_remote_access_tools_anydesk_silent_install"
+                  ]
+    },
+    {
+        "executable":  "appcmd.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\WinSxS\\amd64_microsoft-windows-i..raries-servercommon_31bf3856ad364e35_10.0.26100.7920_none_4519672c203c0275\\appcmd.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_iis_appcmd_http_logging",
+                      "proc_creation_win_iis_appcmd_service_account_password_dumped"
+                  ]
+    },
+    {
+        "executable":  "aspnet_compiler.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\aspnet_compiler.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_aspnet_compiler_susp_paths"
+                  ]
+    },
+    {
+        "executable":  "at.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\at.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_at_interactive_execution"
+                  ]
+    },
+    {
+        "executable":  "attrib.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\attrib.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_attrib_hiding_files"
+                  ]
+    },
+    {
+        "executable":  "auditpol.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\auditpol.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_auditpol_susp_execution"
+                  ]
+    },
+    {
+        "executable":  "bcp.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\180\\Tools\\Binn\\bcp.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_bcp_export_data"
+                  ]
+    },
+    {
+        "executable":  "bitsadmin.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\bitsadmin.exe",
+        "used_in_rules":  6,
+        "rules":  [
+                      "proc_creation_win_bitsadmin_download",
+                      "proc_creation_win_bitsadmin_download_file_sharing_domains",
+                      "proc_creation_win_bitsadmin_download_susp_extensions",
+                      "proc_creation_win_bitsadmin_download_susp_targetfolder",
+                      "proc_creation_win_bitsadmin_download_uncommon_targetfolder",
+                      "proc_creation_win_bitsadmin_potential_persistence"
+                  ]
+    },
+    {
+        "executable":  "certmgr.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.26100.0\\x64\\certmgr.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_certmgr_certificate_installation"
+                  ]
+    },
+    {
+        "executable":  "certoc.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\SysWOW64\\certoc.exe",
+        "used_in_rules":  3,
+        "rules":  [
+                      "proc_creation_win_certoc_download_direct_ip",
+                      "proc_creation_win_certoc_load_dll",
+                      "proc_creation_win_certoc_load_dll_susp_locations"
+                  ]
+    },
+    {
+        "executable":  "certutil.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\certutil.EXE",
+        "used_in_rules":  3,
+        "rules":  [
+                      "proc_creation_win_certutil_decode",
+                      "proc_creation_win_certutil_download",
+                      "proc_creation_win_certutil_download_file_sharing_domains"
+                  ]
+    },
+    {
+        "executable":  "chrome.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+        "used_in_rules":  3,
+        "rules":  [
+                      "proc_creation_win_browsers_chromium_load_extension",
+                      "proc_creation_win_browsers_inline_file_download",
+                      "proc_creation_win_browsers_remote_debugging"
+                  ]
+    },
+    {
+        "executable":  "cloudflared.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Tools\\cloudflared.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_cloudflared_tunnel_cleanup",
+                      "proc_creation_win_cloudflared_tunnel_run"
+                  ]
+    },
+    {
+        "executable":  "cmd.exe",
+        "category":  "windows_builtin",
+        "example_path":  "cmd.exe",
+        "used_in_rules":  24,
+        "rules":  [
+                      "proc_creation_win_cmd_del_execution",
+                      "proc_creation_win_cmd_dosfuscation",
+                      "proc_creation_win_cmd_no_space_execution",
+                      "proc_creation_win_cmd_ping_del_combined_execution",
+                      "proc_creation_win_cmd_redirection_susp_folder",
+                      "proc_creation_win_desktopimgdownldr_susp_execution",
+                      "proc_creation_win_installutil_download",
+                      "proc_creation_win_lolbin_mavinject_process_injection",
+                      "proc_creation_win_nslookup_domain_discovery",
+                      "proc_creation_win_office_exec_from_trusted_locations",
+                      "proc_creation_win_pua_adfind_enumeration",
+                      "proc_creation_win_registry_enumeration_for_credentials_cli",
+                      "proc_creation_win_renamed_pingcastle",
+                      "proc_creation_win_rundll32_mshtml_runhtmlapplication",
+                      "proc_creation_win_rundll32_susp_activity",
+                      "proc_creation_win_sc_service_tamper_for_persistence",
+                      "proc_creation_win_susp_cli_obfuscation_escape_char",
+                      "proc_creation_win_susp_hiding_malware_in_fonts_folder",
+                      "proc_creation_win_susp_ntfs_short_name_path_use_cli",
+                      "proc_creation_win_susp_sysnative",
+                      "proc_creation_win_susp_task_folder_evasion",
+                      "proc_creation_win_sysinternals_eula_accepted",
+                      "proc_creation_win_wmic_recon_hotfix",
+                      "proc_creation_win_wmic_recon_process"
+                  ]
+    },
+    {
+        "executable":  "cmdkey.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\cmdkey.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_cmdkey_recon",
+                      "proc_creation_win_susp_local_system_owner_account_discovery"
+                  ]
+    },
+    {
+        "executable":  "conhost.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\conhost.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_conhost_headless_powershell"
+                  ]
+    },
+    {
+        "executable":  "cscript.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\System32\\cscript.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_susp_gather_network_info_execution"
+                  ]
+    },
+    {
+        "executable":  "curl.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\curl.EXE",
+        "used_in_rules":  3,
+        "rules":  [
+                      "proc_creation_win_curl_download_direct_ip_exec",
+                      "proc_creation_win_curl_local_file_read",
+                      "proc_creation_win_susp_dumpstack_log_evasion"
+                  ]
+    },
+    {
+        "executable":  "DataSvcUtil.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\DataSvcUtil.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_data_exfiltration_by_using_datasvcutil"
+                  ]
+    },
+    {
+        "executable":  "desktopimgdownldr.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\desktopimgdownldr.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_desktopimgdownldr_remote_file_download",
+                      "proc_creation_win_desktopimgdownldr_susp_execution"
+                  ]
+    },
+    {
+        "executable":  "DevToolsLauncher.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Windows\\System32\\DevToolsLauncher.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_devtoolslauncher"
+                  ]
+    },
+    {
+        "executable":  "diskshadow.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Tools\\diskshadow.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_diskshadow_script_mode_susp_location"
+                  ]
+    },
+    {
+        "executable":  "doskey.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\doskey.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_cmd_redirection_susp_folder"
+                  ]
+    },
+    {
+        "executable":  "dotnet-trace.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\System32\\dotnet-trace.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_dotnet_trace_lolbin_execution"
+                  ]
+    },
+    {
+        "executable":  "DumpMinitool.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\Extensions\\TestPlatform\\Extensions\\dump\\DumpMinitool.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_dumpminitool_susp_execution"
+                  ]
+    },
+    {
+        "executable":  "esentutl.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\esentutl.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_esentutl_params"
+                  ]
+    },
+    {
+        "executable":  "expand.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\expand.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_expand_cabinet_files"
+                  ]
+    },
+    {
+        "executable":  "explorer.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\explorer.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_explorer_break_process_tree",
+                      "proc_creation_win_explorer_folder_shortcut_via_shell_binary"
+                  ]
+    },
+    {
+        "executable":  "extrac32.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\extrac32.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_extrac32_ads"
+                  ]
+    },
+    {
+        "executable":  "findstr.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\findstr.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_findstr_sysmon_discovery_via_default_altitude"
+                  ]
+    },
+    {
+        "executable":  "fsutil.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\fsutil.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_fsutil_drive_enumeration"
+                  ]
+    },
+    {
+        "executable":  "ftp.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\ftp.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_ftp_arbitrary_command_execution"
+                  ]
+    },
+    {
+        "executable":  "gpresult.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\gpresult.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_gpresult_execution"
+                  ]
+    },
+    {
+        "executable":  "gpscript.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\gpscript.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_gpscript"
+                  ]
+    },
+    {
+        "executable":  "hh.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\hh.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_hh_chm_execution"
+                  ]
+    },
+    {
+        "executable":  "IEExec.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Windows\\Microsoft.NET\\Framework64\\v2.0.50727\\IEExec.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_ieexec_download"
+                  ]
+    },
+    {
+        "executable":  "ilasm.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\ilasm.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_ilasm_il_code_compilation"
+                  ]
+    },
+    {
+        "executable":  "InfDefaultInstall.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\InfDefaultInstall.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_infdefaultinstall_execute_sct_scripts"
+                  ]
+    },
+    {
+        "executable":  "InstallUtil.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\InstallUtil.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_installutil_download"
+                  ]
+    },
+    {
+        "executable":  "kavremvr.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Tools\\kavremvr.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_kavremover_uncommon_execution"
+                  ]
+    },
+    {
+        "executable":  "ksetup.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\ksetup.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_ksetup_password_change_user"
+                  ]
+    },
+    {
+        "executable":  "mmc.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\mmc.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_mmc_mmc20_lateral_movement"
+                  ]
+    },
+    {
+        "executable":  "MpCmdRun.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Program Files (x86)\\Windows Defender\\MpCmdRun.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_mpcmdrun_remove_windows_defender_definition"
+                  ]
+    },
+    {
+        "executable":  "msdeploy.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Program Files\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_msdeploy"
+                  ]
+    },
+    {
+        "executable":  "msdt.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\msdt.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_msdt_answer_file"
+                  ]
+    },
+    {
+        "executable":  "msedge.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_calc_uncommon_exec"
+                  ]
+    },
+    {
+        "executable":  "msiexec.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\msiexec.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_msiexec_execute_dll",
+                      "proc_creation_win_msiexec_web_install"
+                  ]
+    },
+    {
+        "executable":  "mstsc.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\mstsc.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_mstsc_remote_connection"
+                  ]
+    },
+    {
+        "executable":  "msxsl.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Tools\\msxsl_\\_bin\\Release_x64\\msxsl.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_msxsl_remote_execution"
+                  ]
+    },
+    {
+        "executable":  "net.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\net.EXE",
+        "used_in_rules":  8,
+        "rules":  [
+                      "proc_creation_win_net_groups_and_accounts_recon",
+                      "proc_creation_win_net_start_service",
+                      "proc_creation_win_net_use_mount_share",
+                      "proc_creation_win_net_use_network_connections_discovery",
+                      "proc_creation_win_net_user_add_never_expire",
+                      "proc_creation_win_net_user_default_accounts_manipulation",
+                      "proc_creation_win_net_view_share_and_sessions_enum",
+                      "proc_creation_win_susp_local_system_owner_account_discovery"
+                  ]
+    },
+    {
+        "executable":  "net1.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\net1.exe",
+        "used_in_rules":  5,
+        "rules":  [
+                      "proc_creation_win_net_groups_and_accounts_recon",
+                      "proc_creation_win_net_start_service",
+                      "proc_creation_win_net_user_default_accounts_manipulation",
+                      "proc_creation_win_net_view_share_and_sessions_enum",
+                      "proc_creation_win_susp_local_system_owner_account_discovery"
+                  ]
+    },
+    {
+        "executable":  "nltest.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\nltest.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_nltest_recon"
+                  ]
+    },
+    {
+        "executable":  "nslookup.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\nslookup.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_nslookup_domain_discovery"
+                  ]
+    },
+    {
+        "executable":  "odbcconf.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\odbcconf.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_odbcconf_register_dll_regsvr"
+                  ]
+    },
+    {
+        "executable":  "pcalua.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\pcalua.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_pcalua"
+                  ]
+    },
+    {
+        "executable":  "perl.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files\\Git\\usr\\bin\\perl.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_perl_inline_command_execution"
+                  ]
+    },
+    {
+        "executable":  "PingCastle.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Tools\\PingCastle.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_pua_pingcastle_script_parent"
+                  ]
+    },
+    {
+        "executable":  "powershell.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_hktl_wmiexec_default_powershell",
+                      "proc_creation_win_powershell_encode"
+                  ]
+    },
+    {
+        "executable":  "print.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\print.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_print_remote_file_copy"
+                  ]
+    },
+    {
+        "executable":  "PrintBrm.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\System32\\spool\\tools\\PrintBrm.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_printbrm"
+                  ]
+    },
+    {
+        "executable":  "PsExec.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\AtomicRedTeam\\ExternalPayloads\\PsExec.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_sysinternals_eula_accepted"
+                  ]
+    },
+    {
+        "executable":  "psloglist.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\AtomicRedTeam\\ExternalPayloads\\sysinternals\\psloglist.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_sysinternals_psloglist"
+                  ]
+    },
+    {
+        "executable":  "psr.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\psr.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_psr_capture_screenshots"
+                  ]
+    },
+    {
+        "executable":  "reg.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\reg.EXE",
+        "used_in_rules":  11,
+        "rules":  [
+                      "proc_creation_win_control_panel_item",
+                      "proc_creation_win_office_outlook_enable_unsafe_client_mail_rules",
+                      "proc_creation_win_reg_enable_windows_recall",
+                      "proc_creation_win_reg_machineguid",
+                      "proc_creation_win_reg_query_registry",
+                      "proc_creation_win_reg_rdp_keys_tamper",
+                      "proc_creation_win_registry_enumeration_for_credentials_cli",
+                      "proc_creation_win_registry_ie_security_zone_protocol_defaults_downgrade",
+                      "proc_creation_win_registry_logon_script",
+                      "proc_creation_win_registry_office_disable_python_security_warnings",
+                      "proc_creation_win_sc_service_tamper_for_persistence"
+                  ]
+    },
+    {
+        "executable":  "RegAsm.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\RegAsm.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_regasm_no_flag_or_dll_execution",
+                      "proc_creation_win_regasm_regsvcs_uncommon_location_execution"
+                  ]
+    },
+    {
+        "executable":  "ruby.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Ruby34-x64\\bin\\ruby.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_ruby_inline_command_execution"
+                  ]
+    },
+    {
+        "executable":  "rundll32.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\rundll32.exe",
+        "used_in_rules":  5,
+        "rules":  [
+                      "proc_creation_win_hktl_c3_rundll32_pattern",
+                      "proc_creation_win_hktl_cobaltstrike_load_by_rundll32",
+                      "proc_creation_win_rundll32_susp_execution_with_image_extension",
+                      "proc_creation_win_rundll32_sys",
+                      "proc_creation_win_rundll32_without_parameters"
+                  ]
+    },
+    {
+        "executable":  "sc.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "sc.EXE",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_cmd_redirection_susp_folder",
+                      "proc_creation_win_sc_sdset_hide_sevices"
+                  ]
+    },
+    {
+        "executable":  "schtasks.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\schtasks.exe",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_schtasks_guid_task_name",
+                      "proc_creation_win_schtasks_openssh_tunnelling"
+                  ]
+    },
+    {
+        "executable":  "sdbinst.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\sdbinst.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_sdbinst_shim_persistence"
+                  ]
+    },
+    {
+        "executable":  "sftp.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\System32\\OpenSSH\\sftp.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_sftp"
+                  ]
+    },
+    {
+        "executable":  "svchost.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\AtomicRedTeam\\ExternalPayloads\\svchost.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_svchost_execution_with_no_cli_flags"
+                  ]
+    },
+    {
+        "executable":  "takeown.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\takeown.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_takeown_recursive_own"
+                  ]
+    },
+    {
+        "executable":  "tracker.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\AtomicRedTeam\\tracker.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_lolbin_tracker"
+                  ]
+    },
+    {
+        "executable":  "tshark.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files\\Wireshark\\tshark.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_susp_network_sniffing"
+                  ]
+    },
+    {
+        "executable":  "VaultCmd.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\VaultCmd.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_vaultcmd_list_creds"
+                  ]
+    },
+    {
+        "executable":  "VBoxDrvInst.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files\\Oracle\\VirtualBox\\VBoxDrvInst.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_virtualbox_vboxdrvinst_execution"
+                  ]
+    },
+    {
+        "executable":  "VMwareToolboxCmd.exe",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files\\VMware\\VMware Tools\\VMwareToolboxCmd.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_vmware_toolbox_cmd_persistence"
+                  ]
+    },
+    {
+        "executable":  "vssadmin.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\vssadmin.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_susp_shadow_copies_creation"
+                  ]
+    },
+    {
+        "executable":  "W32tm.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\system32\\W32tm.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_w32tm"
+                  ]
+    },
+    {
+        "executable":  "WINWORD.EXE",
+        "category":  "requires_install",
+        "example_path":  "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_office_exec_from_trusted_locations"
+                  ]
+    },
+    {
+        "executable":  "wmic.EXE",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\System32\\Wbem\\wmic.EXE",
+        "used_in_rules":  2,
+        "rules":  [
+                      "proc_creation_win_wmic_recon_system_info_uncommon",
+                      "proc_creation_win_wmic_squiblytwo_bypass"
+                  ]
+    },
+    {
+        "executable":  "WScript.exe",
+        "category":  "windows_builtin",
+        "example_path":  "C:\\WINDOWS\\System32\\WScript.exe",
+        "used_in_rules":  1,
+        "rules":  [
+                      "proc_creation_win_susp_script_exec_from_temp"
+                  ]
+    }
+]
