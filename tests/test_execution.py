@@ -52,9 +52,16 @@ class ShellInvocationTests(unittest.TestCase):
     def test_wraps_plain_cmd_payload_once(self) -> None:
         invocation = build_shell_invocation(make_case("whoami"))
 
-        self.assertEqual(invocation.popen_args, ["cmd.exe", "/c", "whoami"])
+        self.assertEqual(invocation.popen_args, "cmd.exe /c whoami")
         self.assertTrue(invocation.shell_wrapped)
         self.assertEqual(invocation.launch_commandline, "cmd.exe /c whoami")
+
+    def test_does_not_mangle_embedded_quotes(self) -> None:
+        commandline = 'psloglist.exe "-d" 10 security'
+        invocation = build_shell_invocation(make_case(commandline))
+
+        self.assertEqual(invocation.popen_args, f"cmd.exe /c {commandline}")
+        self.assertNotIn('\\"', invocation.popen_args)
 
     def test_does_not_double_wrap_existing_cmd_exe(self) -> None:
         commandline = "cmd.exe /c whoami"
@@ -75,7 +82,7 @@ class ShellInvocationTests(unittest.TestCase):
         commandline = r"%COMSPEC% /c whoami"
         invocation = build_shell_invocation(make_case(commandline))
 
-        self.assertEqual(invocation.popen_args, ["cmd.exe", "/c", commandline])
+        self.assertEqual(invocation.popen_args, f"cmd.exe /c {commandline}")
         self.assertTrue(invocation.shell_wrapped)
 
 

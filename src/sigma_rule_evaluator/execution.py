@@ -96,8 +96,14 @@ def build_shell_invocation(case: TargetCase) -> ShellInvocation:
     if case.shell == "cmd.exe":
         if command_starts_with_shell(commandline, case.shell):
             return ShellInvocation(commandline, commandline, False)
-        args = ["cmd.exe", "/c", commandline]
-        return ShellInvocation(args, commandline_from_args(args), True)
+        # A list here would make subprocess.Popen quote this via list2cmdline's
+        # MSVCRT convention, escaping any embedded " to \" - a convention
+        # cmd.exe's own /c parsing does not follow, so those backslashes would
+        # survive as literal characters into the child process's real argv
+        # (corrupting any quote-insertion evasion sample under test). Passing
+        # one string instead sends it to CreateProcess unmodified.
+        wrapped = f"cmd.exe /c {commandline}"
+        return ShellInvocation(wrapped, wrapped, True)
     if case.shell == "powershell.exe":
         if command_starts_with_shell(commandline, case.shell):
             return ShellInvocation(commandline, commandline, False)
