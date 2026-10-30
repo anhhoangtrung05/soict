@@ -1,0 +1,10 @@
+{
+  "created_at": "20261029T152056Z",
+  "jobs": [
+    {
+      "rule": "proc_creation_win_net_groups_and_accounts_recon",
+      "technique_id": "T1087.001; T1087.002",
+      "output_path": "rules_patched\\proc_creation_win_net_groups_and_accounts_recon.yml"
+    }
+  ]
+}

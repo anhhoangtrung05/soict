@@ -1,0 +1,15 @@
+{
+  "created_at": "20261029T150139Z",
+  "jobs": [
+    {
+      "rule": "proc_creation_win_sysinternals_psloglist",
+      "technique_id": "T1087; T1087.001; T1087.002",
+      "error": "response does not contain a 'title:' line"
+    },
+    {
+      "rule": "proc_creation_win_net_groups_and_accounts_recon",
+      "technique_id": "T1087.001; T1087.002",
+      "error": "missing 'condition:' nested under detection"
+    }
+  ]
+}

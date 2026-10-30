@@ -11,3 +11,9 @@ output/**
 !output/**/*.json
 !output/**/*.csv
 .venv/
+
+# API keys / secrets.
+.env
+
+# Persistent browser profile for the Gemini web automation (holds your Google login session).
+.gemini_browser_profile/

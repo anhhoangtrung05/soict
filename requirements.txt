@@ -1,3 +1,9 @@
 requests
 openpyxl
 python-dotenv
+playwright
+# pyyaml is optional: gemini_rule_patcher.py validates patched rules with a
+# dependency-free structural check and only uses pyyaml for a stronger parse
+# if it is importable. Skip it if it fails to build (e.g. no prebuilt wheel
+# yet for your Python version and no C build tools installed).
+pyyaml

@@ -1,0 +1,133 @@
+CONTEXT
+
+This is defensive detection-engineering work for an academic cybersecurity research project. The rule below is a publicly published Sigma rule (an open, declarative YAML detection-rule format used by SOC teams; it is configuration, not executable code). The "evasion command lines" are outputs an internal test harness already generated in an isolated lab to measure gaps in the rule's detection coverage - they are being used only to decide how to edit the YAML detection logic so it also matches those patterns. Nothing here creates new attack capability, executes anything, or targets a real system.
+
+You are acting as a Detection Engineer. Your task is to update the Sigma rule's YAML so it covers the listed command lines, while keeping the rule's original scope and intent.
+
+TASK
+
+1. Read the original Sigma rule (INPUT 1).
+2. Read the command lines that evaded it (INPUT 2).
+3. Reason through why each command line evaded the rule: which selector/field is too narrow, whether the command line still represents the same underlying behavior the rule targets (only patch for the ones where it clearly does - skip any sample you cannot confirm preserves that behavior), and what the smallest YAML change would be to close the gap.
+4. Present the patched rule as a single YAML code block.
+
+Use only the two inputs below. Do not invent new command-line samples, add unrelated tools, unrelated LOLBins, unrelated network indicators, or unrelated parent processes, and do not widen the rule beyond what the listed samples require.
+
+==================================================
+INPUT 1: ORIGINAL SIGMA RULE
+============================
+
+title: PUA - AdFind Suspicious Execution
+id: 9a132afa-654e-11eb-ae93-0242ac130002
+related:
+    - id: 455b9d50-15a1-4b99-853f-8d37655a4c1b
+      type: similar
+    - id: 75df3b17-8bcc-4565-b89b-c9898acef911
+      type: obsolete
+status: test
+description: Detects AdFind execution with common flags seen used during attacks
+references:
+    - https://www.joeware.net/freetools/tools/adfind/
+    - https://thedfirreport.com/2020/05/08/adfind-recon/
+    - https://thedfirreport.com/2021/01/11/trickbot-still-alive-and-well/
+    - https://www.microsoft.com/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/
+    - https://social.technet.microsoft.com/wiki/contents/articles/7535.adfind-command-examples.aspx
+    - https://github.com/center-for-threat-informed-defense/adversary_emulation_library/blob/bf62ece1c679b07b5fb49c4bae947fe24c81811f/fin6/Emulation_Plan/Phase1.md
+    - https://github.com/redcanaryco/atomic-red-team/blob/0f229c0e42bfe7ca736a14023836d65baa941ed2/atomics/T1087.002/T1087.002.md#atomic-test-7---adfind---enumerate-active-directory-user-objects
+author: Janantha Marasinghe (https://github.com/blueteam0ps), FPT.EagleEye Team, omkar72, oscd.community
+date: 2021-02-02
+modified: 2023-03-05
+tags:
+    - attack.discovery
+    - attack.t1018
+    - attack.t1087.002
+    - attack.t1482
+    - attack.t1069.002
+    - stp.1u
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection:
+        CommandLine|contains:
+            - 'domainlist'
+            - 'trustdmp'
+            - 'dcmodes'
+            - 'adinfo'
+            - ' dclist '
+            - 'computer_pwdnotreqd'
+            - 'objectcategory='
+            - '-subnets -f'
+            - 'name="Domain Admins"'
+            - '-sc u:'
+            - 'domainncs'
+            - 'dompol'
+            - ' oudmp '
+            - 'subnetdmp'
+            - 'gpodmp'
+            - 'fspdmp'
+            - 'users_noexpire'
+            - 'computers_active'
+            - 'computers_pwdnotreqd'
+    condition: selection
+falsepositives:
+    - Legitimate admin activity
+level: high
+
+
+==================================================
+INPUT 2: EVASION COMMAND LINES
+===============================
+
+1. C:\AtomicRedTeam\atomics\T1087.002\bin\AdFind.exe -f "objectcategory"=computer
+
+==================================================
+PATCHING GUIDELINES
+====================
+
+Preserve intent:
+* Keep the detection focused on the same behavior as the original rule; do not turn it into a generic process-execution rule.
+* Keep the original process/image selector unless the analysis shows it needs to change.
+* Do not remove existing detection logic unless the new logic fully covers it.
+
+Patch narrowly:
+* Change only the selector(s) shown to be too narrow by the evasion samples.
+* Cover the equivalent parameter substitutions, switch/option variants, and quote/whitespace variations shown in the samples.
+* Prefer readable Sigma selectors; use regex only when necessary, and quote any regex as a YAML string.
+
+Avoid over-broadening:
+* Do not match every execution of the process.
+* Do not add domains, IPs, filenames, hashes, users, or paths that are not already in the original rule.
+* Keep the original falsepositives and level fields unless there is a clear, specific reason to change them.
+
+==================================================
+OUTPUT FORMAT
+==============
+
+Respond with a single ```yaml code block containing the complete patched Sigma rule, and nothing else outside that block (no preamble, no summary after it). A short analysis is not needed in the final answer - go straight to the fenced YAML.
+
+The YAML must follow the same structure as the original rule, for example:
+
+title: <same or minimally updated title>
+id: <same id as original rule>
+status: <same status as original rule>
+description: <same or minimally updated description>
+references:
+    - <preserve original references>
+author: <same author as original rule>
+date: <same date as original rule>
+modified: <current date>
+tags:
+    - <preserve original tags>
+logsource:
+    category: <preserve original logsource category>
+    product: <preserve original logsource product>
+detection:
+    <image/process selector>: <valid Sigma selection>
+    <patched command-line selector(s)>: <valid Sigma selection>
+    condition: <valid Sigma condition referencing existing selectors>
+falsepositives:
+    - <preserve original falsepositives>
+level: <same level as original rule>
+
+Before finishing, check that: the YAML is valid and one document; every selector referenced in `condition` is defined; the condition still requires the original process/image selector and does not match every execution of the process; and the rule now covers every evasion sample that your analysis confirmed preserves the original behavior.

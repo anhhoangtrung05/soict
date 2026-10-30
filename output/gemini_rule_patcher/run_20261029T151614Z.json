@@ -1,0 +1,15 @@
+{
+  "created_at": "20261029T151614Z",
+  "jobs": [
+    {
+      "rule": "proc_creation_win_sysinternals_psloglist",
+      "technique_id": "T1087; T1087.001; T1087.002",
+      "output_path": "rules_patched\\proc_creation_win_sysinternals_psloglist.yml"
+    },
+    {
+      "rule": "proc_creation_win_net_groups_and_accounts_recon",
+      "technique_id": "T1087.001; T1087.002",
+      "error": "could not locate a Gemini response container; the page layout may have changed"
+    }
+  ]
+}

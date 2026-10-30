@@ -1,0 +1,42 @@
+title: Suspicious Rundll32 Execution With Image Extension
+id: 4aa6040b-3f28-44e3-a769-9208e5feb5ec
+related:
+    - id: 089fc3d2-71e8-4763-a8a5-c97fbb0a403e
+      type: similar
+status: test
+description: Detects the execution of Rundll32.exe with DLL files masquerading as image files
+references:
+    - https://www.zscaler.com/blogs/security-research/onenote-growing-threat-malware-distribution
+author: Hieu Tran
+date: 2023-03-13
+modified: 2026-10-29
+tags:
+    - attack.defense-evasion
+    - attack.t1218.011
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_img:
+        - Image|endswith: '\rundll32.exe'
+        - OriginalFileName: 'RUNDLL32.exe'
+    selection_cli:
+        CommandLine|re:
+            - '(?i)\."*b"*m"*p'
+            - '(?i)\."*c"*r"*2'
+            - '(?i)\."*e"*p"*s'
+            - '(?i)\."*g"*i"*f'
+            - '(?i)\."*i"*c"*o'
+            - '(?i)\."*j"*p"*e"*g'
+            - '(?i)\."*j"*p"*g'
+            - '(?i)\."*n"*e"*f'
+            - '(?i)\."*o"*r"*f'
+            - '(?i)\."*p"*n"*g'
+            - '(?i)\."*r"*a"*w'
+            - '(?i)\."*s"*r"*2'
+            - '(?i)\."*t"*i"*f'
+            - '(?i)\."*t"*i"*f"*f'
+    condition: all of selection_*
+falsepositives:
+    - Unknown
+level: high

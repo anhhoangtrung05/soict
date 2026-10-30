@@ -1,0 +1,26 @@
+title: Suspicious Extrac32 Alternate Data Stream Execution
+id: 4b13db67-0c45-40f1-aba8-66a1a7198a1e
+status: test
+description: Extract data from cab file and hide it in an alternate data stream
+references:
+    - https://lolbas-project.github.io/lolbas/Binaries/Extrac32/
+author: frack113
+date: 2021-11-26
+modified: 2026-10-30
+tags:
+    - attack.defense-evasion
+    - attack.t1564.004
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_img:
+        - Image|endswith: '\extrac32.exe'
+        - OriginalFileName: 'extrac32.exe'
+    selection_cli:
+        CommandLine|contains: '.cab'
+        CommandLine|re: ':[^\\]'
+    condition: selection_img and selection_cli
+falsepositives:
+    - Unknown
+level: medium

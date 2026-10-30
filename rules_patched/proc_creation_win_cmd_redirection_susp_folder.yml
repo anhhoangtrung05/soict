@@ -1,0 +1,50 @@
+title: Potentially Suspicious CMD Shell Output Redirect
+id: 8e0bb260-d4b2-4fff-bb8d-3f82118e6892
+related:
+    - id: aa2efee7-34dd-446e-8a37-40790a66efd7
+      type: derived
+    - id: 4f4eaa9f-5ad4-410c-a4be-bc6132b0175a
+      type: similar
+status: test
+description: |
+    Detects inline Windows shell commands redirecting output via the ">" symbol to a suspicious location.
+    This technique is sometimes used by malicious actors in order to redirect the output of reconnaissance commands such as "hostname" and "dir" to files for future exfiltration.
+references:
+    - https://thedfirreport.com/2022/07/11/select-xmrig-from-sqlserver/
+author: Nasreddine Bencherchali (Nextron Systems)
+date: 2022-07-12
+modified: 2026-10-29
+tags:
+    - attack.defense-evasion
+    - attack.t1218
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_img:
+        - Image|endswith: '\cmd.exe'
+        - OriginalFileName: 'Cmd.Exe'
+    selection_cli_1:
+        # Note: Add more suspicious locations as you find them
+        # Note: Regex covers standard and error output redirects (>, >>, 1>, 2>), spaces, quotes, and caret obfuscation
+        CommandLine|re:
+            - '[12]?>>?\s*["'']?%APPDATA%[/\\]'
+            - '[12]?>>?\s*["'']?%TEMP%[/\\]'
+            - '[12]?>>?\s*["'']?%TMP%[/\\]'
+            - '[12]?>>?\s*["'']?%USERPROFILE%[/\\]'
+            - '[12]?>>?\s*["'']?(?:[Cc]:|%SystemDrive%)[/\\]ProgramData[/\\]'
+            - '[12]?>>?\s*["'']?(?:[Cc]:|%SystemDrive%)[/\\]T\^?e\^?m\^?p[^/\\]*[/\\]'
+            - '[12]?>>?\s*["'']?(?:[Cc]:|%SystemDrive%)[/\\]Users[/\\]Public[/\\]'
+            - '[12]?>>?\s*["'']?(?:[Cc]:|%SystemDrive%)[/\\]Windows[/\\]T\^?e\^?m\^?p[^/\\]*[/\\]'
+    selection_cli_2:
+        CommandLine|contains:
+            - ' >'
+            - '">'
+            - "'>"
+        CommandLine|contains|all:
+            - 'C:\Users\'
+            - '\AppData\Local\'
+    condition: selection_img and 1 of selection_cli_*
+falsepositives:
+    - Legitimate admin or third party scripts used for diagnostic collection might generate some false positives
+level: medium
